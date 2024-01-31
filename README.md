@@ -8,8 +8,8 @@ This is the repo for:
 
 
 ## Team members
-- Tran Dao Xuan Tri
-- Nguyen Huynh Man
-- Nguyen Minh Triet
-- Truong Tran Phuc Tin
-- Nguyen Phu Uyen
+- [Tran Dao Xuan Tri](https://github.com/TriTran1911)
+- [Nguyen Huynh Man](https://github.com/nhman2002)
+- [Nguyen Minh Triet](https://github.com/Nero511)
+- [Truong Tran Phuc Tin](https://github.com/PhilipsTruong)
+- [Nguyen Phu Uyen](https://github.com/fucien)
