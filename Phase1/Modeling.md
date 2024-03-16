@@ -1,35 +1,36 @@
 # Business Objectives
 
 
-## Hướng dẫn khách hàng để có trải nghiệm mua vé nhanh và hiệu quả:
-- 1: Truy cập vào website
-- 2: Chọn thông tin hành trình
-- 3: Chọn ghế, điểm đón, trả khách, nhập thông tin khách hàng
-- 4: Chọn phương thức thanh toán
-- 5: Mua vé thành công
+## Guide customers to have a fast and effective ticket purchasing experience:
+- 1: Access the website
+- 2: Select itinerary information
+- 3: Select seat, pick up and drop off location, enter customer information
+- 4: Choose payment method
+- 5: Successfully purchased tickets
 
 
 # Trip Information:
-## Loại vé:
-- Vé 1 chiều
-- Vé khứ hồi
+## Ticket type:
+- One-way ticket
+- A round-trip ticket
 
-## Quy trình mua vé:
-- Bước 1: Điểm đến, điểm đi
-    - Tìm kiếm gần vị trí của khách hàng nếu có bến xe gần đó
-- Bước 2: Ngày đi, số người đi(số lượng vé)
-    - Nếu là vé khứ hồi thì cho phép chọn ngày về
+## Ticket purchasing process:
+- Step 1: Destination and departure point
+     - Search near the customer's location if there is a bus station nearby
+- Step 2: Travel date, number of people (number of tickets)
+     - If it is a round-trip ticket, you can choose the return date
 
-- Bước 3:
-    - Chọn giờ đi
-    - Loại ghế(ngồi, giường nằm, limosine, giường đôi)
-    - Chọn vị trí đón khách(các chi nhánh của công ty, cho phép khách hàng nhập vị trí của mình, đưa ra các option gần với vị trí của khách).
-    - Chọn chuyển (ghế trống, có thời gian đi sớm nhất)
-    - Chọn số ghế
+- Step 3:
+     - Choose a time to go
+     - Seat type (seating, bed, limosine, double bed)
+     - Select pick-up location (company branches, allowing customers to enter their location, offering options close to the customer's location).
+     - Select transfer (empty seat, earliest departure time)
+     - Select seat number
 
-- Bước 4: Chọn phương thức thanh toán(nạp tiền vào ứng dụng để thanh toán, ZaloPay, Momo, VNPay, AirPay, ApplePay, SamsungPay,...)
+- Step 4: Choose payment method (top up the application to pay, ZaloPay, Momo, VNPay, AirPay, ApplePay, SamsungPay,...)
 
-- Bước 5: Xác nhận thanh toán thàng công -> mua vé thành công -> hoá đơn điện tử cùng vé xe sẽ được gửi về địa chỉ mail
+- Step 5: Confirm successful payment -> successful ticket purchase -> electronic invoice and bus ticket will be sent to email address
+
 
 # Database:
 
