@@ -35,19 +35,19 @@
 # Database:
 
 **Users**
-|    ID  |  first_name  |  last_name  |  city     |        email        |   Phone      |        password         |  isActive  |
-| ------ | ------------ | ------------| --------- |---------------------|--------------|-------------------------|------------|
-|  01    |   Nguyen     |  Huynh Man  | TP.HCM    | nhman2002@gmail.com | [0123456789] | string(hashed password) |  active    |
-|  02    |     John     |     Doe     | Hai Phong | something@gmail.com | [0234342512] | string(hashed password) |  disable   |
-|........|..............|.............|...........|.....................|..............|.........................|............|
+|  first_name  |  last_name  |  city     |        email        |   Phone      |        password         |  isActive  |
+| ------------ | ------------| --------- |---------------------|--------------|-------------------------|------------|
+|   Nguyen     |  Huynh Man  | TP.HCM    | nhman2002@gmail.com |  0123456789  | string(hashed password) |  active    |
+|     John     |     Doe     | Hai Phong | something@gmail.com |  0234342512  | string(hashed password) |  disable   |
+|..............|.............|...........|.....................|..............|.........................|............|
 
 
 **Tickets**
-|    ID  |  User_Id     |     Type    | `ticket_context`|    paid  |    price   |   paid_medthod |
+|    ID  |  User_Phone  |     Type    | `ticket_context`|    paid  |    price   |   paid_medthod |
 | ------ | ------------ | ------------| --------------- | -------- |----------- |--------------- |
-|   10   |     01       |     1_way   |     Object      |  cancel  |  200.000đ  |   card         |
-|   20   |     02       | round-trip  |     Object      | fulfilled|  100.000đ  |   cod          |
-|   30   |     03       | round-trip  |     Object      |  pending |  100.000đ. |   momo         |
+|   10   | 0123456789   |     1_way   |     Object      |  cancel  |  200.000đ  |   card         |
+|   20   | 0234342512   | round-trip  |     Object      | fulfilled|  100.000đ  |   cod          |
+|   30   | 0362678789   | round-trip  |     Object      |  pending |  100.000đ. |   momo         |
 |........|..............|.............|.................|..........|............|................|
 
 **Ticket_context**
@@ -88,13 +88,13 @@
 # Database Constraint
 
 - `Users`
-    - ID is unique, not null
+    - Phone is unique, not null
     - First_name, Last_name, City, Email, phone, password, isActive is not null
     - phone is an array, we dont know whether the user have multiple phone number
 
 - `Tickets`
     - ID is unique, not null
-    - User_Id, type, ticket_context, paid, price is not null
+    - User_Phone, type, ticket_context, paid, price is not null
     - ticket_context:
         - departure, destination, departmentDate, trip is not null
 
@@ -119,7 +119,6 @@
 - `Users`:
     - Create new `User`
     - Update `Users`:
-        - Update phone(array) (change phone number, concat phone number)
         - Update email(string), password(string), isActive (active, disable)
 
 - `Tickets`:
