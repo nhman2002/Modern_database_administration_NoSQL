@@ -1,0 +1,267 @@
+use FutaBus
+
+db.createCollection("Trip")
+db.createCollection("Employee")
+
+
+db.Trip.insertMany([
+    {
+        "id": "Trip:101",
+        "license": "59-SA-12345",
+        "seatNum": 45,
+        "driverId": "Employee:9991",
+        "vallet": ["Employee:5555", "Employee:1111"],
+        "seatType": "bed",
+        "price": "200000",
+        "seat": ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"]
+    },
+    {
+        "id": "Trip:102",
+        "license": "79-D1-54321",
+        "seatNum": 15,
+        "driverId": "Employee:9992",
+        "vallet": ["Employee:2222", "Employee:3333"],
+        "seatType": "limousine",
+        "price": "250000",
+        "seat": ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"]
+    },
+    {
+        "id": "Trip:103",
+        "license": "78-A1-56789",
+        "seatNum": 45,
+        "driverId": "Employee:9993",
+        "vallet": ["Employee:4444", "Employee:9999"],
+        "seatType": "sit",
+        "price": "150000",
+        "seat": ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"]
+    },
+    {
+        "id": "Trip:104",
+        "license": "77-S1-98765",
+        "seatNum": 45,
+        "driverId": "Employee:9994",
+        "vallet": ["Employee:1234", "Employee:4321"],
+        "seatType": "bed",
+        "price": "200000",
+        "seat": ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"]
+    },
+    {
+        "id": "Trip:105",
+        "license": "69-F1-98765",
+        "seatNum": 15,
+        "driverId": "Employee:9995",
+        "vallet": ["Employee:1235", "Employee:1237"],
+        "seatType": "limousine",
+        "price": "250000",
+        "seat": ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"]
+    }
+]
+)
+
+db.Employee.insertMany([
+    {
+        "id": "Employee:1111",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "321 PLO",
+        "tax": "23123123",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:2222",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "12 SSW",
+        "tax": "1241243",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:3333",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "57 HGD",
+        "tax": "435345",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:4444",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "1123 SSA",
+        "tax": "12354566",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:5555",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "86 VVV",
+        "tax": "546531",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:9999",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "545 TWS",
+        "tax": "545322",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:1234",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "22 AWS",
+        "tax": "123545",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:4321",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "2221 ASC",
+        "tax": "3455673",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:1235",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "412 NVC",
+        "tax": "2346763",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:1237",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "321 AAA",
+        "tax": "78978932",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:9876",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "123 NVC",
+        "tax": "123456",
+        "type": "staff"
+    },
+
+    {
+        "id": "Employee:9991",
+        "firstName": "Nguyen",
+        "lastname": "Tran A",
+        "address": "227 NVC",
+        "tax": "11111111",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9992",
+        "firstName": "Nguyen",
+        "lastname": "Tran B",
+        "address": "227 ABC",
+        "tax": "22222222",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9993",
+        "firstName": "Vu",
+        "lastname": "Tran C",
+        "address": "227 DVS",
+        "tax": "3333333",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9994",
+        "firstName": "Vu",
+        "lastname": "Tran D",
+        "address": "227 STS",
+        "tax": "4444444",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9995",
+        "firstName": "Nguyen",
+        "lastname": "Tran E",
+        "address": "227 SSS",
+        "tax": "5555555",
+        "type": "driver"
+    }
+]
+)
+
+
+db.Trip.insertOne({
+    "id": "Trip:106",
+    "license": "59-FA-98765",
+    "seatNum": 15,
+    "driverId": "Employee:9991",
+    "vallet": ["Employee:1111", "Employee:2222"],
+    "seatType": "limousine",
+    "price": "250000",
+    "seat": ["A01", "A02", "A03", "A04", "A05", "A06", "A07", "A08", "A09", "A10", "A11", "A12", "A13", "A14", "A15"]
+})
+
+db.Trip.aggregate([
+    {
+        $match: { seatType: "limousine" }
+    },
+    {
+        $lookup: {
+            from: "Employee",
+            localField: "driverId",
+            foreignField: "id",
+            as: "driver"
+        }
+    },
+    {
+        $unwind: "$driver"
+    },
+    {
+        $lookup: {
+            from: "Employee",
+            localField: "vallet",
+            foreignField: "id",
+            as: "vallets"
+        }
+    },
+    {
+        $project: {
+            _id: 0,
+            trip_id: "$id",
+            license_plate: "$license",
+            seat_type: "$seatType",
+            price: "$price",
+            driver: {
+                id: "$driver.id",
+                first_name: "$driver.firstName",
+                last_name: "$driver.lastname",
+                address: "$driver.address",
+                tax: "$driver.tax"
+            },
+            vallets: {
+                $map: {
+                    input: "$vallets",
+                    as: "vallet",
+                    in: {
+                        id: "$$vallet.id",
+                        first_name: "$$vallet.firstName",
+                        last_name: "$$vallet.lastname",
+                        address: "$$vallet.address",
+                        tax: "$$vallet.tax"
+                    }
+                }
+            }
+        }
+    }
+])
+
+
+db.Trip.updateOne(
+    { "id": "Trip:106" },
+    { $set: { "seat": ["A01", "A02", "A03"] } }
+)
+
+
+db.Trip.deleteOne({ "id": "Trip:106" })

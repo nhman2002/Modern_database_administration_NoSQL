@@ -1,0 +1,131 @@
+[
+    {
+        "id": "Employee:1111",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "321 PLO",
+        "tax": "23123123",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:2222",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "12 SSW",
+        "tax": "1241243",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:3333",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "57 HGD",
+        "tax": "435345",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:4444",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "1123 SSA",
+        "tax": "12354566",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:5555",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "86 VVV",
+        "tax": "546531",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:9999",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "545 TWS",
+        "tax": "545322",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:1234",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "22 AWS",
+        "tax": "123545",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:4321",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "2221 ASC",
+        "tax": "3455673",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:1235",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "412 NVC",
+        "tax": "2346763",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:1237",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "321 AAA",
+        "tax": "78978932",
+        "type": "vallet"
+    },
+    {
+        "id": "Employee:9876",
+        "firstName": "Nguyen",
+        "lastname": "Van A",
+        "address": "123 NVC",
+        "tax": "123456",
+        "type": "staff"
+    },
+
+    {
+        "id": "Employee:9991",
+        "firstName": "Nguyen",
+        "lastname": "Tran A",
+        "address": "227 NVC",
+        "tax": "11111111",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9992",
+        "firstName": "Nguyen",
+        "lastname": "Tran B",
+        "address": "227 ABC",
+        "tax": "22222222",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9993",
+        "firstName": "Vu",
+        "lastname": "Tran C",
+        "address": "227 DVS",
+        "tax": "3333333",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9994",
+        "firstName": "Vu",
+        "lastname": "Tran D",
+        "address": "227 STS",
+        "tax": "4444444",
+        "type": "driver"
+    },
+    {
+        "id": "Employee:9995",
+        "firstName": "Nguyen",
+        "lastname": "Tran E",
+        "address": "227 SSS",
+        "tax": "5555555",
+        "type": "driver"
+    }
+]
