@@ -158,8 +158,8 @@ body {
         </div>
         <div class="content">
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button>Search</button>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchButton">Search</button>
             </div>
             <table>
                 <thead>
@@ -325,7 +325,20 @@ body {
 
 
     fetchSampleData();
+document.getElementById('searchButton').addEventListener('click', () => {
+    const searchQuery = document.getElementById('searchInput').value.trim(); // Get the search query from the input field
 
+    // Perform the search only if the search query is not empty
+    if (searchQuery) {
+        fetch(`/search?q=${searchQuery}`) // Send a GET request to the server with the search query as a query parameter
+            .then(response => response.json())
+            .then(data => {
+                // Render the search results in the table
+                renderTableRows(data);
+            })
+            .catch(error => console.error('Error searching for tickets:', error));
+    }
+});
 </script>
 
 </body>

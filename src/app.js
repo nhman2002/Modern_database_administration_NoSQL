@@ -103,6 +103,20 @@ app.put('/edit-ticket/:ticketID', async (req, res) => {
     }
 });
 
+// Route for handling search queries
+app.get('/search', async (req, res) => {
+    const ticketCollection = await connectToMongoDB();
+    const searchQuery = req.query.q; // Assuming the search query is passed as 'q' query parameter
+    try {
+        console.log(searchQuery);
+        //partial search for User_Phonge
+        const searchResults = await ticketCollection.find({ User_Phone: { $regex: searchQuery, $options: 'i' } }).toArray();
+        res.json(searchResults);
+    } catch (error) {
+        console.error('Error searching for tickets:', error);
+        res.status(500).json({ error: 'An error occurred while searching for tickets' });
+    }
+});
 // Route to serve the sample data as JSON
 app.get('/sample-data', async (req, res) => {
     const ticketCollection = await connectToMongoDB();
