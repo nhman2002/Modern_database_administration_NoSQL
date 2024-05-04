@@ -1,0 +1,401 @@
+[{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad787"
+  },
+  "ID": 40,
+  "User_Phone": "0456789123",
+  "Type": "1_way",
+  "ticket_context": {
+    "departure": "33333",
+    "destination": "44444",
+    "departmentDate": "2024-03-15T00:00:00-02:00",
+    "returnDate": null,
+    "trip": 303,
+    "seatNum": "C03"
+  },
+  "status": "fulfilled",
+  "price": "150.000đ",
+  "payment_method": "paypal"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad788"
+  },
+  "ID": 50,
+  "User_Phone": "0567891234",
+  "Type": "round-trip",
+  "ticket_context": {
+    "departure": "55555",
+    "destination": "22222",
+    "departmentDate": "2024-04-10T00:00:00-02:00",
+    "returnDate": "2024-04-15T00:00:00-02:00",
+    "trip": 404,
+    "seatNum": "D04"
+  },
+  "status": "fulfilled",
+  "price": "250.000đ",
+  "payment_method": "cash"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad789"
+  },
+  "ID": 60,
+  "User_Phone": "0678912345",
+  "Type": "1_way",
+  "ticket_context": {
+    "departure": 77777,
+    "destination": 88888,
+    "departmentDate": "2024-05-20T00:00:00-02:00",
+    "returnDate": null,
+    "trip": 505,
+    "seatNum": "E05"
+  },
+  "status": "pending",
+  "price": "180.000đ",
+  "payment_method": "card"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad78a"
+  },
+  "ID": 70,
+  "User_Phone": "0789123456",
+  "Type": "round-trip",
+  "ticket_context": {
+    "departure": 99999,
+    "destination": 101010,
+    "departmentDate": "2024-06-15T00:00:00-02:00",
+    "returnDate": "2024-06-20T00:00:00-02:00",
+    "trip": 606,
+    "seatNum": "F06"
+  },
+  "status": "fulfilled",
+  "price": "300.000đ",
+  "payment_method": "paypal"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad78b"
+  },
+  "ID": 80,
+  "User_Phone": "0891234567",
+  "Type": "1_way",
+  "ticket_context": {
+    "departure": 111111,
+    "destination": 121212,
+    "departmentDate": "2024-07-10T00:00:00-02:00",
+    "returnDate": null,
+    "trip": 707,
+    "seatNum": "G07"
+  },
+  "status": "fulfilled",
+  "price": "200.000đ",
+  "payment_method": "cash"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad78c"
+  },
+  "ID": 90,
+  "User_Phone": "0912345678",
+  "Type": "round-trip",
+  "ticket_context": {
+    "departure": 131313,
+    "destination": 141414,
+    "departmentDate": "2024-08-05T00:00:00-02:00",
+    "returnDate": "2024-08-10T00:00:00-02:00",
+    "trip": 808,
+    "seatNum": "H08"
+  },
+  "status": "cancelled",
+  "price": "280.000đ",
+  "payment_method": "card"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad78d"
+  },
+  "ID": 100,
+  "User_Phone": "0123456789",
+  "Type": "1_way",
+  "ticket_context": {
+    "departure": 151515,
+    "destination": 161616,
+    "departmentDate": "2024-09-20T00:00:00-02:00",
+    "returnDate": null,
+    "trip": 909,
+    "seatNum": "I09"
+  },
+  "status": "pending",
+  "price": "220.000đ",
+  "payment_method": "momo"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad78e"
+  },
+  "ID": 110,
+  "User_Phone": "0234342512",
+  "Type": "round-trip",
+  "ticket_context": {
+    "departure": 171717,
+    "destination": 181818,
+    "departmentDate": "2024-10-15T00:00:00-02:00",
+    "returnDate": "2024-10-20T00:00:00-02:00",
+    "trip": 1010,
+    "seatNum": "J10"
+  },
+  "status": "fulfilled",
+  "price": "320.000đ",
+  "payment_method": "paypal"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad78f"
+  },
+  "ID": 120,
+  "User_Phone": "0362678789",
+  "Type": "round-trip",
+  "ticket_context": {
+    "departure": 191919,
+    "destination": 202020,
+    "departmentDate": "2024-11-10T00:00:00-02:00",
+    "returnDate": "2024-11-15T00:00:00-02:00",
+    "trip": 1111,
+    "seatNum": "K11"
+  },
+  "status": "pending",
+  "price": "280.000đ",
+  "payment_method": "card"
+},
+{
+  "_id": {
+    "$oid": "66360522bb7fbc701c1ad790"
+  },
+  "ID": 130,
+  "User_Phone": "0456789123",
+  "Type": "1_way",
+  "ticket_context": {
+    "departure": 212121,
+    "destination": 222222,
+    "departmentDate": "2024-12-05T00:00:00-02:00",
+    "returnDate": null,
+    "trip": 1212,
+    "seatNum": "L12"
+  },
+  "status": "fulfilled",
+  "price": "200.000đ",
+  "payment_method": "cash"
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad793"
+  },
+  "TripID": 101,
+  "license": "51-F1-12345",
+  "seatNum": 45,
+  "driver": 99999,
+  "vallet": [
+    55555
+  ],
+  "seatType": "bed",
+  "price": "250,000d",
+  "seat": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad794"
+  },
+  "TripID": 102,
+  "license": "51-F2-54321",
+  "seatNum": 16,
+  "driver": 44444,
+  "vallet": [
+    22222
+  ],
+  "seatType": "limousine",
+  "price": "200,000d",
+  "seat": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "..."
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad795"
+  },
+  "TripID": 103,
+  "license": "51-F3-67890",
+  "seatNum": 25,
+  "driver": 88888,
+  "vallet": [
+    33333
+  ],
+  "seatType": "coach",
+  "price": "150,000d",
+  "seat": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad796"
+  },
+  "TripID": 104,
+  "license": "51-F4-09876",
+  "seatNum": 33,
+  "driver": 77777,
+  "vallet": [
+    66666
+  ],
+  "seatType": "sleeper",
+  "price": "300,000d",
+  "seat": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad797"
+  },
+  "TripID": 105,
+  "license": "51-F5-54321",
+  "seatNum": 12,
+  "driver": 55555,
+  "vallet": [
+    44444
+  ],
+  "seatType": "executive",
+  "price": "280,000d",
+  "seat": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad798"
+  },
+  "TripID": 106,
+  "license": "51-F6-13579",
+  "seatNum": 20,
+  "driver": 66666,
+  "vallet": [
+    77777
+  ],
+  "seatType": "standard",
+  "price": "180,000d",
+  "seat": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad799"
+  },
+  "TripID": 107,
+  "license": "51-F7-24680",
+  "seatNum": 29,
+  "driver": 33333,
+  "vallet": [
+    88888
+  ],
+  "seatType": "economy",
+  "price": "120,000d",
+  "seat": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad79a"
+  },
+  "TripID": 108,
+  "license": "51-F8-35791",
+  "seatNum": 18,
+  "driver": 22222,
+  "vallet": [
+    99999
+  ],
+  "seatType": "luxury",
+  "price": "400,000d",
+  "seat": [
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad79b"
+  },
+  "TripID": 109,
+  "license": "51-F9-46802",
+  "seatNum": 22,
+  "driver": 11111,
+  "vallet": [
+    22222
+  ],
+  "seatType": "vip",
+  "price": "500,000d",
+  "seat": [
+    "I01",
+    "I02",
+    "I03",
+    "I04",
+    "I05"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66363031bb7fbc701c1ad79c"
+  },
+  "TripID": 110,
+  "license": "51-F0-57913",
+  "seatNum": 15,
+  "driver": 44444,
+  "vallet": [
+    33333
+  ],
+  "seatType": "business",
+  "price": "350,000d",
+  "seat": [
+    "J01",
+    "J02",
+    "J03",
+    "J04",
+    "J05"
+  ]
+}]
