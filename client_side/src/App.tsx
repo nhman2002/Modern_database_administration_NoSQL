@@ -12,8 +12,10 @@ import {
 	faEnvelope,
 	faCircleUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function App() {
+	const [data, setData] = useState([]);
 	const mockData: any = [
 		{
 			id: "Trip:101",
@@ -55,34 +57,33 @@ function App() {
 			price: "200000",
 			seat: ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"],
 		},
-		{
-			id: "Trip:105",
-			license: "69-F1-98765",
-			seatNum: 15,
-			driverId: "Employee:9995",
-			vallet: ["Employee:1235", "Employee:1237"],
-			seatType: "limousine",
-			price: "250000",
-			seat: ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"],
-		},
 	];
 
-	// const testing = () => {
-	// 	fetch(`'http://localhost:3000/getAllTrip'`, {
-	// 		method: "GET",
-	// 	})
-	// 		.then((response) => {
-	// 			if (response.ok) {
-	// 				// Refresh the table after marking ticket as paid
-	// 				// fetchSampleData();
-	// 				console.log(response.json());
-	// 			} else {
-	// 				throw new Error("Failed to mark ticket as paid");
-	// 			}
-	// 		})
-	// 		.catch((error) => console.error("Error marking ticket as paid:", error));
-	// };
-	// testing();
+	const testing = () => {
+		fetch(`http://localhost:3000/getAllTrip`, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => {
+				if (response.ok) {
+					return response.json(); // Parse the response body as JSON
+				} else {
+					throw new Error("Failed to fetch data");
+				}
+			})
+			.then((data) => {
+				// Data contains the parsed JSON response
+				setData(data);
+			})
+			.catch((error) => {
+				console.error("Error fetching data:", error);
+			});
+	};
+
+	testing();
+	console.log(data);
 
 	return (
 		<div className=" h-full w-full flex  items-center bg-black text-white flex-col overflow-auto">
@@ -161,7 +162,7 @@ function App() {
 				}}
 			>
 				<div className="border-solid  border-2 border-black">
-					{mockData.map((item: any, i) => {
+					{data.map((item: any, i) => {
 						return (
 							<div className="mx-5 my-5 flex flex-row gap-10 border-solid  border-2 border-black justify-center items-center">
 								<div className="truncate h-12 mx-2 flex justify-center items-center">
