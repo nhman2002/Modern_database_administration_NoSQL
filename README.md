@@ -1,8 +1,8 @@
 # CSC12111: Modern Database Administration - NoSQL
 
-This is the repo for:
-- `Project`: Doing research on analyze, synthesize, and practice teamwork skills in analyzing the needs of the online sales system to design a suitable database.
-- `PE`: practical exercise, for more details, refer to the `pe-[number]` files
+This the branch for managing tickets function:
+- App and Db in the src folder.
+- Install: npm install -> npm run
 
 ## Overview
 
