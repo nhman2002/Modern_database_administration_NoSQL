@@ -30,15 +30,75 @@ async function connectToMongoDB() {
 }
 
 app.get("/getAllTrip", async (req, res) => {
-	const ticketCollection = await connectToMongoDB();
+	const tripCollection = await connectToMongoDB();
 
 	try {
-		const sampleData = await ticketCollection.find({}).toArray();
-        console.log("ne",sampleData)
-		res.json(sampleData);
+		const data = await tripCollection.find({}).toArray();
+		console.log("ne", data);
+		res.json(data);
 	} catch (error) {
-		console.error("Error fetching sample data:", error);
+		console.error("Error fetching sample data: ", error);
 		res.sendStatus(500);
+	}
+});
+
+app.delete("/deleteTrip/:tripID", async (req, res) => {
+	const tripID = req.params.tripID; // Access tripID from req.params.tripID
+	const tripCollection = await connectToMongoDB();
+
+	try {
+		console.log(tripID);
+
+		const data = await tripCollection.deleteOne({ id: tripID }); // Remove toArray()
+		console.log("ne", data);
+		res.json(data);
+	} catch (error) {
+		console.error("Error deleting data: ", error);
+		res.sendStatus(500);
+	}
+});
+
+app.post("/createTrip", async (req, res) => {
+	const item = req.body;
+	const tripCollection = await connectToMongoDB();
+	console.log(item);
+
+	try {
+		const result = await tripCollection.insertOne(item);
+
+		// Extract the inserted ID from the result
+		const insertedId = result.insertedId;
+
+		// Send a simple success response with the inserted ID
+		res.json({ insertedId: insertedId, message: "Trip created successfully" });
+	} catch (error) {
+		console.error("Error creating trip:", error);
+		res
+			.status(500)
+			.json({ error: "An error occurred while creating the trip" });
+	}
+});
+
+app.put("/updateTrip/:tripID", async (req, res) => {
+	const tripID = req.params.tripID;
+	const updatePrice = req.body.price; // Access price from req.body
+	const tripCollection = await connectToMongoDB();
+
+	try {
+		const result = await tripCollection.updateOne(
+			{ id: tripID },
+			{ $set: { price: updatePrice } }
+		);
+
+		// Check if any document is modified
+		if (result.modifiedCount > 0) {
+			res.status(200).json({ message: "Trip updated successfully" });
+		} else {
+			res.status(404).json({ message: "Trip not found" });
+		}
+	} catch (error) {
+		console.error("Error updating trip:", error);
+		res.status(500).json({ message: "Internal server error" });
 	}
 });
 

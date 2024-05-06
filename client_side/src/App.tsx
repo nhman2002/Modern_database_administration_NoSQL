@@ -1,5 +1,3 @@
-// import { useState } from "react";
-// import * as pic from "../public/images/home-header-top.png"
 import homeHeaderTopPic from "./assets/images/home-header-top.png";
 import fb from "./assets/images/fb.png";
 import ytb from "./assets/images/ytb.png";
@@ -12,54 +10,30 @@ import {
 	faEnvelope,
 	faCircleUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-
-function App() {
+import { useCallback, useEffect, useState } from "react";
+export default function App() {
 	const [data, setData] = useState([]);
-	const mockData: any = [
-		{
-			id: "Trip:101",
-			license: "59-SA-12345",
-			seatNum: 45,
-			driverId: "Employee:9991",
-			vallet: ["Employee:5555", "Employee:1111"],
-			seatType: "bed",
-			price: "200000",
-			seat: ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"],
-		},
-		{
-			id: "Trip:102",
-			license: "79-D1-54321",
-			seatNum: 15,
-			driverId: "Employee:9992",
-			vallet: ["Employee:2222", "Employee:3333"],
-			seatType: "limousine",
-			price: "250000",
-			seat: ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"],
-		},
-		{
-			id: "Trip:103",
-			license: "78-A1-56789",
-			seatNum: 45,
-			driverId: "Employee:9993",
-			vallet: ["Employee:4444", "Employee:9999"],
-			seatType: "sit",
-			price: "150000",
-			seat: ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"],
-		},
-		{
-			id: "Trip:104",
-			license: "77-S1-98765",
-			seatNum: 45,
-			driverId: "Employee:9994",
-			vallet: ["Employee:1234", "Employee:4321"],
-			seatType: "bed",
-			price: "200000",
-			seat: ["A01", "A02", "A03", "A04", "A05", "A06", "A10", "A11", "A12"],
-		},
-	];
+	const [id, setId] = useState("");
+	const [license, setLicense] = useState("");
+	const [seatNum, setSeatNum] = useState(0);
+	const [driverId, setDriverId] = useState("");
+	const [vallet, setVallet] = useState([]);
+	const [price, setPrice] = useState("");
+	const [seatType, setSeatType] = useState("");
+	const [seat, setSeat] = useState([]);
 
-	const testing = () => {
+	const newtrip = {
+		id: id,
+		license: license,
+		seatNum: seatNum,
+		driverId: driverId,
+		vallet: vallet,
+		seatType: seatType,
+		price: price,
+		seat: seat,
+	};
+
+	const FetchData = () => {
 		fetch(`http://localhost:3000/getAllTrip`, {
 			method: "GET",
 			headers: {
@@ -81,22 +55,140 @@ function App() {
 				console.error("Error fetching data:", error);
 			});
 	};
+	const deleteData = useCallback(async (tripID: string) => {
+		await fetch(`http://localhost:3000/deleteTrip/${tripID}`, {
+			method: "DELETE",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => {
+				if (response.ok) {
+					FetchData();
+					console.log("success deleting");
+				}
+			})
+			.catch((error) => {
+				console.error("Error fetching data:", error);
+			});
+	}, []);
 
-	testing();
-	console.log(data);
+	const createData = useCallback(async (item: any) => {
+		try {
+			const response = await fetch(`http://localhost:3000/createTrip`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(item),
+			});
+
+			if (response.ok) {
+				FetchData(); // Refetch data after successful creation
+				console.log("Trip created successfully");
+				// Optionally, display a success message to the user
+			} else {
+				// Handle non-200 responses (e.g., server errors)
+				console.error("Failed to create trip:", response.statusText);
+				// Optionally, display an error message to the user
+			}
+		} catch (error) {
+			console.error("Error creating trip:", error);
+			// Handle fetch or network errors
+			// Optionally, display an error message to the user
+		}
+	}, []);
+	const updateData = useCallback(async (tripID: string, price: string) => {
+		await fetch(`http://localhost:3000/updateTrip/${tripID}`, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ price }), // Wrapping price in an object
+		})
+			.then(async (response) => {
+				if (response.ok) {
+					await response.json(); // Parse response JSON data
+					FetchData();
+					console.log("success updating");
+				} else {
+					throw new Error("Failed to update trip"); // Throw an error for non-200 responses
+				}
+			})
+			.catch((error) => {
+				console.error("Error updating trip:", error);
+			});
+	}, []);
+
+	useEffect(() => {
+		FetchData();
+	}, []);
+
+	const Item = (item: any) => {
+		const [check, setCheck] = useState(true);
+		const [updatePrice, setUpdatePrice] = useState(item.item.price);
+		function debounce(func, timeout = 700) {
+			let timer;
+			return (...args) => {
+				clearTimeout(timer);
+				timer = setTimeout(() => {
+					func.apply(this, args);
+				}, timeout);
+			};
+		}
+
+		return (
+			<div className="flex flex-row items-center justify-center gap-10 mx-5 my-5 border-2 border-black border-solid">
+				<div className="flex items-center justify-center h-12 mx-2 truncate">
+					{item.item.id}
+				</div>
+				<div className="flex items-center justify-center h-12 mx-2 truncate">
+					{item.item.license}
+				</div>
+				<div className="flex items-center justify-center h-12 mx-2 truncate">
+					{item.item.seatNum}
+				</div>
+				<div className="flex items-center justify-center h-12 mx-2 truncate">
+					{item.item.driverId}
+				</div>
+				<div className="flex items-center justify-center h-12 mx-5 truncate">
+					<input
+						defaultValue={updatePrice}
+						className="border-2 border-black border-solid"
+						onChange={debounce((event) => {
+							const newValue = event.target.value;
+							setUpdatePrice(newValue);
+							updateData(item.item.id, newValue);
+						})}
+						onSelect={() => setCheck(false)}
+						onBlur={() => setCheck(true)}
+					/>
+				</div>
+				<div className="flex items-center justify-center h-12 mx-2 truncate">
+					{item.item.seat}
+				</div>
+				<button
+					className="px-2 mx-2 capitalize bg-red-300 rounded-md"
+					onClick={() => deleteData(item.item.id)}
+				>
+					delete
+				</button>
+			</div>
+		);
+	};
 
 	return (
-		<div className=" h-full w-full flex  items-center bg-black text-white flex-col overflow-auto">
-			<header className="flex border h-36 w-full items-center bg-white text-black flex-col ">
+		<div className="flex flex-col items-center w-full h-full overflow-auto text-white bg-black ">
+			<header className="flex flex-col items-center w-full text-black bg-white border h-36 ">
 				<div
-					className="w-full flex items-center justify-center h-10"
+					className="flex items-center justify-center w-full h-10"
 					style={{
 						backgroundImage: `url(${homeHeaderTopPic})`,
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover", // Optional: Adjust to fit your needs
 					}}
 				>
-					<div className="text-white mr-10">
+					<div className="mr-10 text-white">
 						<FontAwesomeIcon icon={faPhone} className="mr-2" />
 						19006067
 					</div>
@@ -104,40 +196,40 @@ function App() {
 						<FontAwesomeIcon icon={faEnvelope} className="mr-2" />
 						Hotro@futabus.vn
 					</div>
-					<div className=" ml-20">
+					<div className="ml-20 ">
 						<img
 							src={fb}
 							alt="Facebook"
-							className=" w-7 h-7 rounded-full truncate ml-10 mr-1"
+							className="ml-10 mr-1 truncate rounded-full w-7 h-7"
 						/>
 					</div>
 					<div>
 						<img
 							src={ytb}
 							alt="Youtube"
-							className=" w-7 h-7 rounded-full truncate  mr-1"
+							className="mr-1 truncate rounded-full w-7 h-7"
 						/>
 					</div>
-					<div className=" flex mr-2 justify-center items-center text-white">
+					<div className="flex items-center justify-center mr-2 text-white ">
 						<img
 							src={VN}
 							alt="Vietnam Flag"
-							className=" w-7 h-7 rounded-full truncate ml-10 mr-1"
+							className="ml-10 mr-1 truncate rounded-full w-7 h-7"
 						/>
 						VN
 					</div>
-					<div className=" flex mr-2 justify-center items-center text-white">
+					<div className="flex items-center justify-center mr-2 text-white ">
 						<img
 							src={UK}
 							alt="UK Flag"
-							className=" w-7 h-7 rounded-full truncate ml-10 mr-1"
+							className="ml-10 mr-1 truncate rounded-full w-7 h-7"
 						/>
 						UK
 					</div>
 
-					<div className=" capitalize text-white ml-10">
+					<div className="ml-10 text-white capitalize ">
 						<button
-							className="bg-green-500 rounded-md py-1 px-2"
+							className="px-2 py-1 bg-green-500 rounded-md"
 							// onClick={handleClick}
 						>
 							<FontAwesomeIcon icon={faCircleUser} className="mr-2" />
@@ -147,7 +239,7 @@ function App() {
 				</div>
 			</header>
 			<div
-				className="w-full flex items-center justify-center h-full scale-90"
+				className="flex items-center justify-center w-full h-full scale-90"
 				style={{
 					backgroundImage: `url(${news})`,
 					backgroundRepeat: "no-repeat",
@@ -156,44 +248,120 @@ function App() {
 				}}
 			></div>
 			<div
-				className="w-full flex justify-center items-center bg-white text-black flex-col overflow-auto"
+				className="flex flex-col items-center justify-center w-full overflow-auto text-black bg-white"
 				style={{
 					height: "1000px",
 				}}
 			>
-				<div className="border-solid  border-2 border-black">
-					{data.map((item: any, i) => {
-						return (
-							<div className="mx-5 my-5 flex flex-row gap-10 border-solid  border-2 border-black justify-center items-center">
-								<div className="truncate h-12 mx-2 flex justify-center items-center">
-									{item.id}
-								</div>
-								<div className="truncate h-12 mx-2 flex justify-center items-center">
-									{item.license}
-								</div>
-								<div className="truncate h-12 mx-2 flex justify-center items-center">
-									{item.seatNum}
-								</div>
-								<div className="truncate h-12 mx-2 flex justify-center items-center">
-									{item.driverId}
-								</div>
-								<div className="truncate h-12 mx-5 flex justify-center items-center">
-									{item.price}
-								</div>
-								<div className="truncate h-12 mx-2 flex justify-center items-center">
-									{item.seat}
-								</div>
-								<button className="bg-red-300 px-2 rounded-md capitalize mx-2">
-									{" "}
-									delete
-								</button>
-							</div>
-						);
+				<div className="border-2 border-black border-solid">
+					{data.map((item: any) => {
+						return <Item item={item} />;
 					})}
+				</div>
+				<div className="flex flex-col items-center justify-center my-5">
+					{/* <TextField></TextField> */}
+					<div className="text-3xl capitalize">Create a New Trip:</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">Id:</div>
+						<input
+							value={id}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								console.log(o.target.value);
+								setId(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">License:</div>
+						<input
+							value={license}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								setLicense(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">Seat Number:</div>
+						<input
+							value={seatNum}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								setSeatNum(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">DriverId:</div>
+						<input
+							value={driverId}
+							className="border-2 border-black border-solid "
+							onChange={(o: any) => {
+								setDriverId(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">Vallet:</div>
+						<input
+							value={vallet}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								setVallet(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">Price:</div>
+						<input
+							value={price}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								setPrice(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">Seat Type:</div>
+						<input
+							value={seatType}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								setSeatType(o.target.value);
+							}}
+						/>
+					</div>
+					<div className="flex flex-row my-2">
+						<div className="w-40 ">Seat List:</div>
+						<input
+							value={seat}
+							className="border-2 border-black border-solid"
+							onChange={(o: any) => {
+								setSeat(o.target.value);
+							}}
+						/>
+					</div>
+					<div>
+						<button
+							className="px-2 py-2 mx-2 my-2 text-white bg-blue-500 rounded-md"
+							onClick={() => {
+								setId("");
+								setLicense("");
+								setDriverId("");
+								setVallet([]);
+								setSeatNum(0);
+								setSeat([]);
+								setSeatType("");
+								setPrice("");
+								createData(newtrip);
+							}}
+						>
+							Submit
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
-
-export default App;
