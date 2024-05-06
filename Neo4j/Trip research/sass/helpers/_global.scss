@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; //or 10px for using rem
+}
+
+body {
+    font-family: $primary-font;
+    font-size: 1.4rem;
+    color: $text-color;
+    line-height: 1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+    font-family: $primary-font;
+    font-size: 1.4rem;
+}
+
+input,
+textarea {
+    line-height: normal;
+}
+
+button {
+    cursor: pointer;
+}

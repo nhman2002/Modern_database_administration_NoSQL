@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/bookingStep3.css">
+    <!-- Create Header -->
+    <script type="module" src="./../scripts/header.js"></script>
+</head>
+
+<body class="wrapper">
+    <!-- header -->
+    <my-header></my-header>
+    <section class="topic">
+        <div class="mini-container">
+            <h2 class="topic-title">thông tin hàng khách</h2>
+        </div>
+    </section>
+    <!-- step bar -->
+    <my-step-bar-third></my-step-bar-third>
+    <!-- customer -->
+    <section class="customer">
+        <div class="container">
+            <div class="customer-wrapper">
+                <div class="customer-form customer-block">
+                    <h3 class="customer-title">thông tin hành khách</h3>
+                    <form action="" class="form-validation">
+                        <div class="customer-field form-group-name form-group">
+                            <label for="customer-name" class="customer-field-label">Họ tên hành khách *</label>
+                            <input data-type="name" type="text" name="Ho va Ten" id="customer-name"
+                                class="customer-field-input" placeholder="Họ và tên">
+                        </div>
+                        <div class="customer-field form-group-phone form-group">
+                            <label for="customer-phone" class="customer-field-label">Số điện thoại *</label>
+                            <input data-type="phone" type="text" name="SDT" id="customer-phone"
+                                class="customer-field-input" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="customer-field form-group-email form-group">
+                            <label for="customer-email" class="customer-field-label">Email *</label>
+                            <input data-type="mail" type="text" name="Email" id="customer-email"
+                                class="customer-field-input" placeholder="Nhập email">
+                        </div>
+                        <div class="customer-location">
+                            <div class="customer-field customer-location-item form-group-city form-group">
+                                <label for="customer-city" class="customer-field-label">Tỉnh/TP *</label>
+                                <select data-type="select" name="Tinh/Thanh Pho" id="customer-city"
+                                    class="customer-field-input">
+                                    <option value="" selected disabled hidden>Chọn quận/huyện</option>
+                                    <option value="TP.Hồ chí Minh">TP.Hồ chí Minh</option>
+                                    <option value="zz">zz</option>
+                                    <option value="ss">ss</option>
+                                    <option value="zz">zz</option>
+                                    <option value="ss">ss</option>
+                                    <option value="zz">zz</option>
+                                    <option value="ss">ss</option>
+                                    <option value="zz">zz</option>
+                                    <option value="ss">ss</option>
+                                    <option value="zz">zz</option>
+                                    <option value="ss">ss</option>
+                                    <option value="zz">zz</option>
+                                    <option value="ss">ss</option>
+                                </select>
+                            </div>
+                            <div class="customer-field customer-location-item form-group-district form-group">
+                                <label for="customer-district" class="customer-field-label">Quận/Huyện *</label>
+                                <select data-type="select" name="Quan/Huyen" id="customer-district"
+                                    class="customer-field-input">
+                                    <option value="" selected disabled hidden>Chọn tỉnh/TP</option>
+                                    <option value="Thủ Đức">Thủ Đức</option>
+                                    <option value="aa">aa</option>
+                                    <option value="cc">cc</option>
+                                    <option value="aa">aa</option>
+                                    <option value="cc">cc</option>
+                                    <option value="aa">aa</option>
+                                    <option value="cc">cc</option>
+                                    <option value="aa">aa</option>
+                                    <option value="cc">cc</option>
+                                    <option value="aa">aa</option>
+                                    <option value="cc">cc</option>
+                                    <option value="aa">aa</option>
+                                    <option value="cc">cc</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="customer-field customer-terms form-group-terms form-group">
+                            <input data-type="terms" type="checkbox" name="Futa Terms" id="checkbox-terms">
+                            <label for="checkbox-terms" class="customer-terms-label">
+                                Chấp nhận
+                                <span class="customer-terms-link">điều khoản đặt vé</span>
+                                của FUTA BusLines
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="customer-rules customer-block">
+                    <h3 class="customer-title">điều khoản & lưu ý</h3>
+                    <ul class="customer-rules-list">
+                        <li class="customer-rules-item">
+                            (*) Quý khách vui lòng mang email có chứa mã vé đến văn phòng để đổi vé lên xe trước giờ
+                            xuất bến ít nhất
+                            <span class="customer-rules-highlight">60 phút</span>
+                            để chúng tôi trung chuyển.
+                        </li>
+                        <li class="customer-rules-item">
+                            (*) Thông tin hành khách phải chính xác, nếu không sẽ không thể lên xe hoặc hủy/đổi vé.
+                        </li>
+                        <li class="customer-rules-item">
+                            (*) Quý khách không được đổi/trả vé vào các ngày Lễ Tết (ngày thường quý khách được quyền
+                            chuyển đổi hoặc hủy vé
+                            <span class="customer-rules-highlight">một lần</span>
+                            duy nhất trước giờ xe chạy 24 giờ), phí hủy vé 10%.
+                        </li>
+                        <li class="customer-rules-item">
+                            (*) Nếu quý khách có nhu cầu trung chuyển, vui lòng liên hệ số điện thoại
+                            <a href="tel:1900 6067" class="customer-rules-highlight customer-rules-tel">1900 6067</a>
+                            trước khi đặt vé. Chúng tôi không đón/trung chuyển tại những điểm xe trung chuyển không thể
+                            tới được.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- error -->
+    <section class="error">
+        <ul class="error-list">
+            <li class="error-item">fs</li>
+        </ul>
+    </section>
+    <!-- step nav -->
+    <section class="step-nav">
+        <div class="mini-container">
+            <div class="step-nav-control">
+                <div class="step-nav-button step-prev-btn">
+                    <i class="fa-solid fa-angle-left"></i>
+                    Quay lại
+                </div>
+                <div class="step-nav-button step-next-btn form-submit-validation">
+                    Tiếp tục
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <my-footer></my-footer>
+    <script type="module" src="./../scripts/stepBar.js"></script>
+    <script type="module" src="./../scripts/footer.js"></script>
+    <script src="./../scripts/validation_mold.js"></script>
+</body>
+
+</html>

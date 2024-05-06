@@ -1,0 +1,401 @@
+.data {
+    font-family: "SFProVietsub";
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    input[type="checkbox"] {
+        @include size(1.5rem);
+        appearance: none;
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+        border: 1px solid $icon-route-color;
+        border-radius: 3px;
+        overflow: hidden;
+        &:checked {
+            border: none;
+            background-color: $primary-color;
+            & + label {
+                color: $primary-color;
+            }
+        }
+        &:checked::after {
+            display: inline-block;
+            content: "\2713";
+            border-radius: 3px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            @include positionElement("center", absolute);
+        }
+    }
+    &.data-popup-active {
+        .data {
+            &-overlay {
+                display: block;
+            }
+            &-popup {
+                display: block;
+            }
+        }
+    }
+    &.data-confirm-active {
+        .data {
+            &-overlay {
+                display: block;
+            }
+            &-confirm {
+                display: block;
+            }
+        }
+    }
+    &-overlay {
+        position: fixed;
+        background-color: rgba(black, 0.1);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 98;
+        display: none;
+    }
+    &-confirm {
+        position: fixed;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        display: none;
+        border-radius: 8px;
+        @include boxShadowAdmin();
+        background-color: white;
+        width: 550px;
+        padding: 2.5rem;
+        &-icon {
+            width: 100%;
+            font-size: 4.5rem;
+            color: $danger-color;
+            display: inline-block;
+            @include flexBox(flex, center, center);
+            margin: 2.5rem 0;
+            i {
+                padding: 2rem;
+                border: 3px solid $danger-color;
+                border-radius: 50%;
+            }
+        }
+        &-txt {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 100;
+            color: $text-content-color;
+            @include letterSpace(0.05rem);
+            margin-bottom: 1rem;
+        }
+        &-button {
+            margin-top: 3.5rem;
+            @include flexBox(flex, center, center);
+            column-gap: 1.5rem;
+        }
+        &-cancel {
+            padding: 1.2rem 2rem;
+            border-radius: 5px;
+            background-color: $success-color;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &:hover {
+                background-color: $success-hover-color;
+            }
+        }
+        &-remove {
+            padding: 1.2rem 2rem;
+            border-radius: 5px;
+            background-color: $danger-color;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &:hover {
+                background-color: $danger-hover-color;
+            }
+        }
+    }
+    &-popup {
+        position: fixed;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        display: none;
+        border-radius: 8px;
+        @include boxShadowAdmin();
+        background-color: white;
+        width: 650px;
+        padding: 2.5rem;
+        &-title {
+            color: $text-bold-color;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            @include letterSpace(0.05rem);
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+        &-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.5rem;
+            color: $danger-hover-color;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+                color: white;
+                background-color: $danger-color;
+            }
+        }
+    }
+    &-form {
+        @include flexBox(flex, flex-start, flex-start, column);
+        row-gap: 2rem;
+        &-group {
+            @include flexBox(flex, flex-start, flex-start, column);
+            row-gap: 0.5rem;
+            width: 100%;
+        }
+        &-label {
+            color: $title-color;
+            font-size: 1.4rem;
+            font-weight: 500;
+            @include letterSpace(0.05rem);
+            width: 100%;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+        &-input {
+            color: $text-content-color;
+            font-size: 1.5rem;
+            padding: 0.8rem 1rem;
+            width: 100%;
+            border: 1px solid rgba($border-field-color, 0.6);
+            border-radius: 5px;
+        }
+        &-submit {
+            width: 100%;
+            @include flexBox(flex, center, space-between);
+        }
+        &-btn {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-transform: capitalize;
+            @include letterSpace(0.05rem);
+            padding: 1.2rem 5rem;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:first-child {
+                background-color: $info-color;
+                &:hover {
+                    background-color: $info-hover-color;
+                }
+            }
+            &:last-child {
+                background-color: $warning-color;
+                &:hover {
+                    background-color: $warning-hover-color;
+                }
+            }
+        }
+    }
+    &-wrapper {
+        border-radius: 8px;
+        @include boxShadowAdmin();
+    }
+    &-control {
+        @include flexBox(flex, center, space-between);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid $border-color;
+        &-all {
+            @include flexBox(flex);
+            @include letterSpace(0.05rem);
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            width: 50%;
+            color: $primary-light-color;
+            font-weight: 700;
+            label {
+                cursor: pointer;
+            }
+        }
+        &-add {
+            width: 12%;
+            padding: 0 1rem;
+            &-btn {
+                padding: 1rem 1.5rem;
+                border-radius: 5px;
+                @include flexBox(flex, center, center);
+                @include letterSpace(0.05rem);
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: white;
+                background-color: $info-color;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                span {
+                    margin-left: 1rem;
+                }
+                i {
+                    font-size: 1.6rem;
+                }
+                &:hover {
+                    background-color: $info-hover-color;
+                }
+            }
+        }
+        &-input {
+            width: 10%;
+            padding: 0 1rem;
+            display: grid;
+            place-content: center;
+        }
+        &-count {
+            font-size: 1.4rem;
+            font-weight: 100;
+            color: $text-color;
+            margin-left: 1rem;
+        }
+    }
+    &-title {
+        @include flexBox(flex, center);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $title-color;
+        padding: 2rem 0;
+        border-bottom: 1px solid $border-color;
+
+        &-item {
+            color: $text-bold-color;
+            &:nth-child(1) {
+                width: 5%;
+                text-align: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            &:nth-child(2) {
+                width: 8%;
+            }
+            &:nth-child(3) {
+                width: 15%;
+            }
+            &:nth-child(4) {
+                width: 7%;
+            }
+            &:nth-child(5) {
+                width: 8%;
+            }
+            &:nth-child(6) {
+                width: 7%;
+            }
+            &:nth-child(7) {
+                width: 15%;
+                word-break: break-all;
+            }
+            &:nth-child(8) {
+                width: 23%;
+            }
+            &:nth-child(9) {
+                width: 12%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    }
+    &-value {
+        &-row {
+            padding: 1rem 0;
+            @include flexBox(flex, center);
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-weight: 100;
+            @include letterSpace(0.05rem);
+            color: $title-color;
+            transition: 0.3s ease;
+            &:hover {
+                background-color: rgba($primary-light-color, 0.1);
+            }
+        }
+        &-item {
+            &:nth-child(1) {
+                width: 5%;
+                display: grid;
+                place-content: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            &:nth-child(2) {
+                width: 8%;
+            }
+            &:nth-child(3) {
+                width: 15%;
+            }
+            &:nth-child(4) {
+                width: 7%;
+            }
+            &:nth-child(5) {
+                width: 8%;
+            }
+            &:nth-child(6) {
+                width: 7%;
+            }
+            &:nth-child(7) {
+                width: 15%;
+                word-break: break-all;
+            }
+            &:nth-child(8) {
+                width: 23%;
+                line-height: 1.5;
+            }
+            &:nth-child(9) {
+                width: 12%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        &-action {
+            &-button {
+                @include flexBox(flex, center);
+                gap: 0.5rem;
+            }
+            &-edit,
+            &-remove {
+                @include flexBox(flex, center);
+                @include letterSpace(0.05rem);
+                text-transform: capitalize;
+                color: white;
+                font-size: 1.5rem;
+                i {
+                    margin-left: 0.5rem;
+                }
+                border-radius: 5px;
+                padding: 0.8rem;
+                transition: background-color 0.3s ease;
+            }
+            &-edit {
+                background-color: $success-color;
+                &:hover {
+                    background-color: $success-hover-color;
+                }
+            }
+            &-remove {
+                background-color: $danger-color;
+                &:hover {
+                    background-color: $danger-hover-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.step-nav {
+    margin-bottom: 4.5rem;
+    &-control {
+        @include flexBox(flex, center, space-between);
+    }
+    &-button {
+        position: relative;
+        width: calc(50% - 3rem / 2);
+        padding: 1.5rem 0;
+        @include flexBox(flex, flex-start, center);
+        @include letterSpace(0.05rem);
+        cursor: pointer;
+        border-radius: 2.5rem;
+        font-size: 1.6rem;
+        i {
+            font-size: 1.8rem;
+        }
+        &:first-child {
+            color: $text-bold-color;
+            border: 1px solid $border-dotted-color;
+            i {
+                @include positionElement("row-center");
+                left: 30%;
+            }
+        }
+        &:last-child {
+            color: white;
+            border: 1px solid $secondary-color;
+            background-color: $secondary-color;
+        }
+    }
+    @include maxWidth(599.8px) {
+        &-button {
+            font-size: 1.4rem;
+            &:first-child {
+                i {
+                    left: 1.5rem;
+                }
+            }
+        }
+    }
+}

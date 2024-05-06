@@ -1,0 +1,29 @@
+.topic {
+    padding: 1.5rem 0 6.6rem 0;
+    &-route {
+        font-family: "SFProVietsub";
+        @include flexBox(flex, center);
+        column-gap: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        @include letterSpace(0.05rem);
+        text-transform: capitalize;
+        color: $text-table-color;
+        margin-bottom: 1.5rem;
+    }
+    &-date {
+        font-size: 1.5rem;
+        color: #4a4a4a;
+        @include letterSpace(0.05rem);
+    }
+    @include maxWidth(767.8px) {
+        padding: 1.5rem 0 5.5rem 0;
+        &-route {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        &-date {
+            font-size: 1.2rem;
+        }
+    }
+}

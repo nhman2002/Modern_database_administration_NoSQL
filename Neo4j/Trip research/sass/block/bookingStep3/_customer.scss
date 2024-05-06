@@ -1,0 +1,135 @@
+.customer {
+    padding: 3rem 0 4rem;
+    &-wrapper {
+        @include flexBox(flex, flex-start, space-between);
+    }
+    &-block {
+        width: calc(50% - 3rem / 2);
+        padding: 2.5rem 1.5rem 2rem;
+        border: 1px solid $border-color;
+        background-color: white;
+        border-radius: 0.8rem;
+    }
+    &-form {
+        background-color: $component-bg-color;
+    }
+    &-title {
+        font-family: "SFProVietsub";
+        font-size: 1.6rem;
+        font-weight: 700;
+        @include letterSpace(0.08rem);
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-bottom: 2.5rem;
+    }
+    &-field {
+        padding: 0.7rem 0;
+        @include flexBox(flex, flex-start, flex-start, column);
+        &-label {
+            font-family: "SFProVietsub";
+            font-weight: 200;
+            font-size: 1.5rem;
+            display: block;
+            padding-bottom: 0.2rem;
+            padding-left: 0.2rem;
+            color: $text-schedule-color;
+            @include letterSpace(0.05rem);
+            margin-bottom: 2px;
+        }
+        &-input {
+            display: block;
+            width: 100%;
+            padding: 1rem 0.8rem;
+            @include letterSpace(0.05rem);
+            color: $text-bold-color;
+            border-radius: 8px;
+            border: 1px solid $border-route-color;
+            &::placeholder {
+                color: $text-color;
+            }
+        }
+    }
+    &-location {
+        @include flexBox(flex, center, space-between);
+        &-item {
+            width: calc(50% - 2rem / 2);
+            select {
+                color: $text-table-color;
+            }
+        }
+    }
+    &-terms {
+        @include flexBox(flex, center);
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-bottom: 0;
+        input {
+            display: block;
+            @include size(2rem);
+            cursor: pointer;
+            flex-shrink: 1;
+        }
+        &-label {
+            font-size: 1.5rem;
+            color: $text-bold-color;
+            margin-left: 0.8rem;
+            cursor: pointer;
+            margin-top: 0.2rem;
+        }
+        &-link {
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+    &-rules {
+        &-list {
+            @include flexBox(flex, flex-start, flex-start, column);
+            row-gap: 2rem;
+        }
+        &-item {
+            font-family: "SFProVietsub";
+            font-weight: 200;
+            font-size: 1.6rem;
+            @include letterSpace(0.05rem);
+            color: $text-bold-color;
+            line-height: 1.15;
+        }
+        &-highlight {
+            color: $primary-color;
+        }
+        &-tel {
+            cursor: pointer;
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-wrapper {
+            display: block;
+        }
+        &-block {
+            width: 100%;
+            &:first-child {
+                margin-bottom: 1.5rem;
+            }
+        }
+        &-terms {
+            align-items: stretch;
+            padding-left: 0.2rem;
+            padding-right: 0;
+            input {
+                min-width: 1.5rem;
+                min-height: 1.5rem;
+            }
+            &-label {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+        &-location {
+            display: block;
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+}

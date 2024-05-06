@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body class="wrapper">
+
+    <!-- header -->
+    <header class="header">
+        <a href="#" class="header-logo header-logo-top">
+            <h1>
+                <img src="./images/home-img-logo.png" class="header-logo-img" alt="">
+            </h1>
+        </a>
+        <div class="header-toggle">
+            <i class='bx bx-menu header-toggle-menu'></i>
+            <i class='bx bx-x header-toggle-close'></i>
+        </div>
+        <div class="header-side-menu">
+            <div class=" header-top">
+                <div class="header-wrapper container">
+                    <a href="#" class="header-logo header-logo-side">
+                        <h1>
+                            <img src="./images/home-img-logo.png" class="header-logo-img" alt="">
+                        </h1>
+                    </a>
+                    <div class="header-contact">
+                        <div class="header-contact-phone">
+                            <i class='bx bxs-phone header-contact-icon'></i><span
+                                class="header-contact-content">19006067</span>
+                        </div>
+                        <div class="header-contact-mail">
+                            <i class="fa-solid fa-envelope header-contact-icon"></i><span
+                                class="header-contact-content">Hotro@futabus.vn</span>
+                        </div>
+                    </div>
+
+                    <div class="header-control">
+                        <div class="header-social">
+                            <a href="#" class="header-social-link">
+                                <i class='bx bxl-facebook header-social-icon '></i>
+                            </a>
+                            <a href="#" class="header-social-link">
+                                <i class='bx bxl-youtube header-social-icon '></i>
+                            </a>
+                        </div>
+                        <ul class="header-language-list use-vn">
+                            <li class="header-language-item">
+                                <img src="./images/VietNam.png" alt="" class="header-language-image">
+                                <span class="header-language-text">VN</span>
+                            </li>
+                            <li class="header-language-item use-uk">
+                                <img src="./images/UK.png" alt="" class="header-language-image">
+                                <span class="header-language-text">EN</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="header-login">
+                            <i class='bx bxs-user-circle header-login-icon'></i>
+                            <span class="header-login-text">Đăng nhập</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom container">
+                <a href="#" class="header-logo header-logo-inner">
+                    <h1>
+                        <img src="./images/home-img-logo.png" class="header-logo-img" alt="">
+                    </h1>
+                </a>
+                <ul class="header-nav">
+                    <li class="header-nav-item header-nav-active">
+                        <a href="#" class="header-nav-link">trang chủ</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">lịch trình</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">tin tức</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">tuyển dụng</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">liên hệ</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">hóa đơn</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">về chúng tôi</a>
+                    </li>
+                </ul>
+                <img src="./images/home-header-mascot1.png" alt="" class="header-bottom-imgleft header-bottom-img">
+                <img src="./images/home-header-mascot2.png" alt="" class="header-bottom-imgright header-bottom-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+        <div class="hero-swipe">
+            <div class="hero-swipe-wrapper">
+                <div class="hero-swipe-slide"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- booking -->
+    <section class="booking">
+        <div class="container">
+            <div class="booking-box">
+                <form class="booking-form main-form" method="POST" action="/">
+                    <div class="booking-options">
+                        <div class="form-group booking-form-group booking-options-one-way">
+                            <input type="radio" name="type-of-way" id="options-one-way" checked></input>
+                            <label for="options-one-way">Một chiều</label>
+                        </div>
+                        <div class="form-group booking-form-group booking-options-two-way">
+                            <input type="radio" name="type-of-way" id="options-two-way"></input>
+                            <label for="options-two-way">Khứ hồi</label>
+                        </div>
+                    </div>
+                    <div class="booking-infor">
+                        <div class="booking-route">
+                            <div class="booking-route-swap"><img src="./images/home-booking-swap.png" alt=""
+                                    class="booking-route-swap-img">
+                            </div>
+                            <div class="form-group booking-form-group booking-route-item booking-route-departure">
+                                <label for="route-departure">Điểm đi</label>
+                                <input type="text" id="source" name="source" placeholder="Chọn điểm đi" required>
+                            </div>
+                            <div class="form-group booking-form-group booking-route-item booking-route-destination">
+                                <label for="route-destination">Điểm đến</label>
+                                <input type="text" id="destination" name="destination" placeholder="Chọn điểm đến" required>
+                            </div>
+                        </div>
+                        <div class="booking-date">
+                            <div class="form-group booking-form-group booking-date-item booking-date-departure">
+                                <label for="date-departure">Ngày đi</label>
+                                <input type="date" name="" id="date-departure" name="date-departure">
+                            </div>
+                            <div class="form-group booking-form-group booking-date-item booking-date-destination">
+                                <label for="date-destination">Ngày về</label>
+                                <input type="date" name="" id="date-destination" name="date-destination" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="booking-submit form-submit-button" type="submit">
+                        <i class="fa-solid fa-magnifying-glass booking-submit-icon"></i>
+                        <span class="booking-submit-text">tìm chuyến xe</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- error -->
+    <section class="error">
+        <ul class="error-list">
+            <li class="error-item">fs</li>
+        </ul>
+    </section>
+    <!-- banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-wrapper">
+                <!-- Slider main container -->
+                <div class="swiper banner-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="banner-swiper-wrapper swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="banner-swiper-item swiper-slide">
+                            <a href="#" class="banner-swiper-link">
+                                <img src="./images/home-slick-slide1.jpg" alt="" class="banner-swiper-img">
+                            </a>
+                        </div>
+                        <div class="banner-swiper-item swiper-slide">
+                            <a href="#" class="banner-swiper-link">
+                                <img src="./images/home-slick-slide2.png" alt="" class="banner-swiper-img">
+                            </a>
+                        </div>
+                        <div class="banner-swiper-item swiper-slide">
+                            <a href="#" class="banner-swiper-link">
+                                <img src="./images/home-slick-slide3.jpg" alt="" class="banner-swiper-img">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="banner-swiper-pagination swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="banner-swiper-button swiper-button-prev"></div>
+                    <div class="banner-swiper-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- popular route -->
+    <section class="popular">
+        <div class="container">
+            <div class="popular-header-title">tuyến phổ biến</div>
+            <ul class="popular-list">
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img1.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">đà lạt</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">239km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">250.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img2.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">nha trang</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">426km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">225.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img3.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">đà nẵng</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">850km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">375.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img4.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">cần thơ</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">166km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">145.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img5.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">đà nẵng</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">hà nội</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">766km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">18h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">340.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img6.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">hà tiên</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">315km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">185.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img7.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">châu đốc</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">240km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">155.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="popular-item">
+                    <a href="#" class="popular-item-link">
+                        <img src="./images/home-route-img8.png" alt="" class="popular-item-image">
+                        <div class="popular-info">
+                            <div class="popular-info-title">
+                                <span class="popular-info-start popular-info-to-go">sài gòn</span>
+                                <i class='bx bx-log-in-circle popular-info-arr'></i>
+                                <span class="popular-info-dest popular-info-to-go">cà mau</span>
+                            </div>
+                            <ul class="popular-info-detail">
+                                <li class="popular-info-distance">
+                                    <i class='bx bxs-map popular-info-icon'></i>
+                                    <span class="popular-info-text">302km</span>
+                                </li>
+                                <li class="popular-info-timespan">
+                                    <i class='bx bxs-time-five popular-info-icon'></i>
+                                    <span class="popular-info-text">8h</span>
+                                </li>
+                                <li class="popular-info-cost">
+                                    <i class='bx bxs-wallet popular-info-icon'></i>
+                                    <span class="popular-info-text">210.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- quality -->
+    <section class="quality">
+        <div class="container">
+            <h2 class="quality-header-title">futa - chất lượng là danh dự</h2>
+            <ul class="quality-list">
+                <li class="quality-item">
+                    <i class="bx bxs-group quality-item-icon"></i>
+                    <div class="quality-item-content">
+                        <h4 class="quality-item-title">20m</h4>
+                        <div class="quality-item-bottom">
+                            <p class="quality-item-sub">Hơn 20 triệu lượt khách</p>
+                            <p class="quality-item-text">Phương Trang phục vụ hơn 20 triệu lượt khách/bình quân 1 năm
+                                trên toàn quốc</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="quality-item">
+                    <i class="bx bxs-gas-pump quality-item-icon"></i>
+                    <div class="quality-item-content">
+                        <h4 class="quality-item-title">250</h4>
+                        <div class="quality-item-bottom">
+                            <p class="quality-item-sub">Hơn 250 phòng vé, phòng hàng</p>
+                            <p class="quality-item-text">Phương Trang có hơn 250 phòng vé, trạm trung chuyển, bến xe...
+                                trên toàn hệ thống</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="quality-item">
+                    <i class="bx bxs-bus quality-item-icon"></i>
+                    <div class="quality-item-content">
+                        <h4 class="quality-item-title">1,600</h4>
+                        <div class="quality-item-bottom">
+                            <p class="quality-item-sub">Hơn 1,600 chuyến mỗi ngày</p>
+                            <p class="quality-item-text">Phương Trang phục vụ hơn 1600 chuyến xe đường dài và liên tỉnh
+                                mỗi ngày</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- recommend -->
+    <section class="recommend">
+        <h2 class="recommend-title">điểm đến phổ biến</h2>
+        <p class="recommend-sub">Gợi ý những điểm du lịch được ưa thích trong năm</p>
+        <div class="recommend-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper recommend-swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img1.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img2.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img3.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img4.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img5.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img6.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img7.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img8.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img9.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img10.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img11.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img12.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img13.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img14.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img15.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img16.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img17.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img11.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide recommend-swiper-slide"
+                    style="background-image: url('./images/home-recommend-img14.png');">
+                    <a href="#">
+                        <div class="recommend-swiper-content">
+                            <div class="recommend-swiper-content">
+                                <p class="recommend-swiper-province">
+                                    <i class='bx bxs-map recommend-swiper-icon'></i>
+                                    <span class="recommend-swiper-text">nha trang</span>
+                                </p>
+                                <p class="recommend-swiper-city">khánh hòa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+
+            <!-- If we need navigation buttons -->
+            <div class="recommend-swiper-button recommend-swiper-button-prev"><i class='bx bx-chevron-left'></i></div>
+            <div class="recommend-swiper-button recommend-swiper-button-next"><i class='bx bx-chevron-right'></i></div>
+
+            <!-- If we need scrollbar -->
+        </div>
+    </section>
+    <section class="new">
+        <div class="recommend-title">tin tức cập nhật</div>
+        <div class="recommend-sub new-sub">Tin tức mới nhất về FUTA Lines và thông tin các tuyến xe</div>
+        <div class="container">
+            <div class="new-swiper">
+                <div class="new-swiper-wrapper swiper-wrapper">
+                    <div class="new-swiper-slide swiper-slide">
+                        <a href="#">
+                            <img src="./images/home-news-img1.png" alt="" class="new-swiper-img">
+                            <div class="new-swiper-content">
+                                <p> An Tâm Đặt Vé - Thanh Toán Dễ Dàng - Quét Ngay Mã QR</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="new-swiper-slide swiper-slide">
+                        <a href="#">
+                            <img src="./images/home-news-img2.png" alt="" class="new-swiper-img">
+                            <div class="new-swiper-content">
+                                <p> PHƯƠNG TRANG MỞ ĐĂNG KÝ GIỮ CHỖ ONLINE VÉ TẾT NGUYÊN ĐÁN NĂM 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="new-swiper-slide swiper-slide">
+                        <a href="#">
+                            <img src="./images/home-news-img3.png" alt="" class="new-swiper-img">
+                            <div class="new-swiper-content">
+                                <p>Bảng giá vé tết các tuyến Huế, Nha Trang, Cam Ranh, Phan Thiết,An Giang về TP.Hồ Chí
+                                    Minh
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="new-swiper-slide swiper-slide">
+                        <a href="#">
+                            <img src="./images/home-news-img3.png" alt="" class="new-swiper-img">
+                            <div class="new-swiper-content">
+                                <p>HỖ TRỢ KHÁCH HÀNG ĐỔI TRẢ VÉ DO ẢNH HƯỞNG CỦA DỊCH COVID-19</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="new-swiper-slide swiper-slide">
+                        <a href="#">
+                            <img src="./images/home-news-img4.png" alt="" class="new-swiper-img">
+                            <div class="new-swiper-content">
+                                <p>THƯ CHÚC TẾT XUÂN TÂN SỬU 2021</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="new-more">Xem thêm</a>
+        </div>
+    </section>
+
+    <section class="regulation">
+        <div class="container">
+            <ul class="regulation-list">
+                <li class="regulation-item">
+                    <a href="#" class="regulation-link">
+                        <i class='bx bxs-credit-card-front regulation-item-icon'></i>
+                        <div class="regulation-content">
+                            <h3 class="regulation-content-title">những quy định chung</h3>
+                            <p class="regulation-content-des">Quy định về việc đặt mua vé và quy định chung</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="regulation-item">
+                    <a href="#" class="regulation-link">
+                        <i class='bx bxs-truck regulation-item-icon'></i>
+                        <div class="regulation-content">
+                            <h3 class="regulation-content-title">vận chuyển hàng hóa</h3>
+                            <p class="regulation-content-des">Quy định về hàng hoá và an toàn vận chuyển</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="regulation-item">
+                    <a href="#" class="regulation-link">
+                        <i class='bx bxs-package regulation-item-icon'></i>
+                        <div class="regulation-content">
+                            <h3 class="regulation-content-title">thông tin hành lý</h3>
+                            <p class="regulation-content-des">Quy định về hành lý xách tay và ký gửi</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-list">
+                <div class="footer-item footer-info">
+                    <h3 class="footer-title footer-info-title">Tổng đài đặt vé và CSKH</h3>
+                    <div class="footer-info-local">
+                        <div class="footer-info-phone"><a href="tel:19006067">1900 6067</a></div>
+                        <a href="#" class="footer-info-sub">
+                            <img src="./images/home-footer-subscribe.png" alt="" class="footer-info-img">
+                        </a>
+                    </div>
+                    <p class="footer-info-name">CÔNG TY CỔ PHẦN XE KHÁCH PHƯƠNG TRANG FUTA BUS LINES</p>
+                    <p class="footer-info-address"> Địa chỉ: 468-468A Lê Văn Lương, P.Tân Phong, Q.7, TP Hồ Chí Minh.
+                    </p>
+                    <p class="footer-info-mail">Email: <a href="mailto:hotro@futabus.vn">hotro@futabus.vn</a></p>
+                    <div class="footer-info-contact">
+                        <p class="footer-info-call">Điện thoại: <a href="tel:02838386852">028 3838 6852</a></p>
+                        <p class="footer-info-call">Fax: <a href="tel:02838386853">028 3838 6853</a></p>
+                    </div>
+                </div>
+                <div class="footer-item footer-line">
+                    <h3 class="footer-title footer-line-title">FUTA Bus Lines</h3>
+                    <div class="footer-nav">
+                        <ul class="footer-nav-left">
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Về chúng tôi</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Lịch trình</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Tin tức</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Tra cứu thông tin đặt vé</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-nav-right">
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Điều khoản sử dụng</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Hỏi đáp</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Hướng dẫn đặt vé trên Web</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Hướng dẫn đặt vé trên App</a>
+                            </li>
+                            <li class="footer-nav-item">
+                                <i class='bx bx-chevrons-right footer-nav-icon'></i>
+                                <a href="#" class="footer-nav-link">Mạng lưới văn phòng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item footer-connect">
+                    <div class="footer-connect-item">
+                        <h3 class="footer-title footer-connect-title">kết nối với chúng tôi</h3>
+                        <div class="footer-connect-link">
+                            <a href="#" class="footer-connect-social"><img src="./images/fb.png" alt=""></a>
+                            <a href="#" class="footer-connect-social"><img src="./images/ytb.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="footer-connect-item">
+                        <h3 class="footer-title footer-connect-title">tải app futa</h3>
+                        <div class="footer-connect-link">
+                            <a href="#" class="footer-connect-app"><i class='bx bxl-apple'></i>App Store</a>
+                            <a href="#" class="footer-connect-app"><i class='bx bxl-play-store'></i>CH Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item footer-feature">
+                    <a href="#" class="footer-feature-item">
+                        <img src="./images/home-footer-bottom1.png" alt="" class="footer-feature-img">
+                    </a>
+                    <a href="#" class="footer-feature-item">
+                        <img src="./images/home-footer-bottom2.png" alt="" class="footer-feature-img">
+                    </a>
+                    <a href="#" class="footer-feature-item">
+                        <img src="./images/home-footer-bottom3.png" alt="" class="footer-feature-img">
+                    </a>
+                    <a href="#" class="footer-feature-item">
+                        <img src="./images/home-footer-bottom4.png" alt="" class="footer-feature-img">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-end">
+                &copy; 2022 | Bản quyền thuộc về Công ty Cổ Phần Xe Khách Phương Trang FUTA Bus Lines | www.futabus.vn |
+                Chịu trách nhiệm nội dung: Đinh Văn Huỳnh
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/header.js"></script>
+    <!--  Slide -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./vendors/swiperSlider.js"></script>
+    <!-- Validation -->
+    <script src="./scripts/validation_index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/schedule.css">
+    <!-- Create Header -->
+    <script type="module" src="./../scripts/header.js"></script>
+
+</head>
+
+<body class="wrapper">
+
+    <my-header></my-header>
+    <!-- banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-wrapper">
+                <!-- Slider main container -->
+                <div class="swiper banner-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="banner-swiper-wrapper swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="banner-swiper-item swiper-slide">
+                            <a href="#" class="banner-swiper-link">
+                                <img src="./../images/home-slick-slide1.jpg" alt="" class="banner-swiper-img">
+                            </a>
+                        </div>
+                        <div class="banner-swiper-item swiper-slide">
+                            <a href="#" class="banner-swiper-link">
+                                <img src="./../images/home-slick-slide2.png" alt="" class="banner-swiper-img">
+                            </a>
+                        </div>
+                        <div class="banner-swiper-item swiper-slide">
+                            <a href="#" class="banner-swiper-link">
+                                <img src="./../images/home-slick-slide3.jpg" alt="" class="banner-swiper-img">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="banner-swiper-pagination swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="banner-swiper-button swiper-button-prev"></div>
+                    <div class="banner-swiper-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- search -->
+    <section class="search">
+        <div class="container">
+            <ul class="search-list">
+                <li class="search-item">
+                    <input type="text" placeholder="Tìm điểm đi..." name="search-departure"
+                        class="search-input search-departure">
+                    <i class="search-icon bx bx-search"></i>
+                </li>
+                <li class="search-item">
+                    <input type="text" placeholder="Tìm điểm đến..." name="search-destination"
+                        class="search-input search-destination">
+                    <i class="search-icon bx bx-search"></i>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- schedule table -->
+    <section class="schedule">
+        <div class="container">
+            <table class="schedule-head">
+                <thead class="schedule-head-title">
+                    <tr class="schedule-head-row">
+                        <th class="schedule-head-route schedule-head-item">Tuyến xe</th>
+                        <th class="schedule-head-type schedule-head-item">Loại xe</th>
+                        <th class="schedule-head-distance schedule-head-item">Quãng đường</th>
+                        <th class="schedule-head-timespan schedule-head-item">Thời gian hành trình</th>
+                        <th class="schedule-head-cost schedule-head-item">Giá vé</th>
+                        <th class="schedule-head-timestart schedule-head-item">Giờ chạy</th>
+                        <th class="schedule-head-empty schedule-head-item"></th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="schedule-body">
+                <div class="schedule-none-value">Không tìm thấy thông tin</div>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">bắc bình minh &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">TP.Hồ chí minh</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">hà nội &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">nam định</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">đà nẵng</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">huế</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">đà nẵng &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">hà nội</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">đà lạt &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">TP.Hồ chí minh</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">cần thơ &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">vũng tàu</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">cà mau</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">đà lạt</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">châu đốc</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">cam ranh &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">đà nẵng</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">cà mau &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">cần thơ</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">buôn ma thuộc &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">TP.Hồ chí minh</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">nha trang</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">bến tre &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">TP.Hồ chí minh</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">bảo lộc &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">huế</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">đà nẵng</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">quảng nghãi</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="schedule-item">
+                    <thead class="schedule-item-head-responsive">
+                        <tr class="schedule-item-head-row">
+                            <th class="schedule-item-t-route">Tuyến xe</th>
+                            <th class="schedule-item-t-type">Loại xe</th>
+                            <th class="schedule-item-t-distance">Quãng đường</th>
+                            <th class="schedule-item-t-timespan">Thời gian hành trình</th>
+                            <th class="schedule-item-t-cost">Giá vé</th>
+                            <th class="schedule-item-t-timestart">Giờ chạy</th>
+                            <th class="schedule-item-t-empty"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="schedule-item-body">
+                        <tr class="schedule-item-datarow schedule-item-primary">
+                            <td class="schedule-item-start schedule-d-departure">bạc liêu &#8594;</td>
+                        </tr>
+                        <tr class="schedule-item-datarow">
+                            <td class="schedule-item-data schedule-item-d-destination">TP.Hồ chí minh</td>
+                            <td class="schedule-item-data schedule-item-d-type">limousine</td>
+                            <td class="schedule-item-data schedule-item-d-distance">159 km</td>
+                            <td class="schedule-item-data schedule-item-d-timpspan">3 giờ 15 phút</td>
+                            <td class="schedule-item-data schedule-item-d-cost"></td>
+                            <td class="schedule-item-data schedule-item-d-timestart">Chi tiết<i
+                                    class="fa-solid fa-info"></i></td>
+                            <td class="schedule-item-data schedule-item-d-empty"><button class="schedule-item-button"><i
+                                        class='bx bxs-credit-card-front'></i>Đặt vé</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <my-footer></my-footer>
+
+    <!-- Create Footer -->
+    <script type="module" src="./../scripts/footer.js"></script>
+    <!-- Siwper Slider -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./../vendors/swiperSlider.js"></script>
+    <!-- script -->
+    <script src="./../scripts/schedule.js"></script>
+</body>
+
+</html>

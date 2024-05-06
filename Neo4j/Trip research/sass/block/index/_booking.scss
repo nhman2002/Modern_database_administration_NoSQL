@@ -1,0 +1,233 @@
+.booking {
+    padding: 4rem 0;
+    &-form {
+        position: relative;
+        background-color: white;
+        padding: 2.5rem 2.5rem 4.5rem;
+        box-shadow: 4px 4px 20px 1px hsl(0deg 0% 55% / 40%);
+        border-radius: 1.6rem;
+    }
+    &-options {
+        @include flexBox(flex, center);
+        gap: 2.5rem;
+        margin-bottom: 1rem;
+        &-one-way,
+        &-two-way {
+            @include flexBox(flex, center);
+            gap: 0.6rem;
+            label {
+                font-size: 1.4rem;
+                color: $title-color;
+                font-weight: 600;
+                text-align: left;
+                @include letterSpace(0.05rem);
+                cursor: pointer;
+            }
+            input[type="radio"] {
+                display: inline-block;
+                @include customRadio(2rem, white, 0.1rem, $primary-color, $primary-color);
+            }
+        }
+    }
+    &-infor {
+        @include flexBox(flex, center, space-between, row, wrap);
+    }
+    &-route {
+        position: relative;
+        @include flexBox(flex, stretch, space-between);
+        @include size(47.8rem, 8.4rem);
+        &-swap {
+            @include positionElement("center");
+            @include size(4rem);
+            cursor: pointer;
+            border-radius: 50%;
+            &-img {
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &-item {
+            width: calc(50% - 1rem);
+            padding: 1.3rem 1.7rem 0;
+            @include flexBox(flex, center, flex-start, column);
+            border: 1px solid $border-color;
+            border-radius: 0.6rem;
+            label {
+                font-size: 1.4rem;
+                color: $text-color;
+                @include letterSpace(0.05rem);
+                font-weight: 600;
+                text-align: center;
+                line-height: 1;
+                margin-bottom: 0.2rem;
+                cursor: pointer;
+                width: 100%;
+            }
+            input {
+                display: inline-block;
+                max-width: 19rem;
+                padding: 0.7rem 1rem;
+                font-size: 2rem;
+                color: $text-content-color;
+                @include letterSpace(0.05rem);
+                font-weight: 600;
+                text-align: center;
+                line-height: 1;
+                border: none;
+                &::placeholder {
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+    &-date {
+        @include size(40rem, 8.4rem);
+        @include flexBox(flex, center, center);
+        border: 1px solid $border-color;
+        border-radius: 0.6rem;
+        padding: 1.2rem 3rem;
+
+        &-item {
+            @include flexBox(flex, center, flex-start, column);
+            &:first-child {
+                border-right: 1px solid $border-color;
+                padding-right: 0.5rem;
+            }
+            &:last-child {
+                padding-left: 0.5rem;
+            }
+            label {
+                width: 100%;
+                margin-bottom: 0.7rem;
+                font-size: 1.4rem;
+                font-weight: 300;
+                text-align: center;
+                @include letterSpace(0.05rem);
+                cursor: pointer;
+            }
+            input {
+                display: inline-block;
+                padding: 0.7rem 1rem;
+                font-size: 1.4rem;
+                border: 1px solid $border-color-dark;
+                border-radius: 0.5rem;
+                max-width: 16.5rem;
+            }
+        }
+    }
+    &-submit {
+        border: none;
+        padding: 1.3rem 1.4rem;
+        color: white;
+        background-color: $primary-color;
+        border-radius: 0.8rem;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 40%);
+        @include flexBox(flex, center, center);
+        position: absolute;
+        bottom: 0;
+        right: 4rem;
+        transform: translateY(45%);
+        &-icon {
+            font-size: 1.6rem;
+            margin-right: 0.2rem;
+            transform: translateY(-0.1rem);
+        }
+        &-text {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: 300;
+            @include letterSpace(0.05rem);
+        }
+    }
+
+    @include maxWidth(969.8px) {
+        padding: 2rem 0;
+        &-route {
+            width: 100%;
+            input {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        &-date {
+            margin-top: 2rem;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                @include size(0.5px, calc(100% - 2rem));
+                background-color: $border-color;
+                @include positionElement("center");
+            }
+            &-item:first-child {
+                border-right: none;
+            }
+            &-item:last-child {
+            }
+            &-item:not(:nth-child(999)) {
+                padding: 1.3rem;
+                width: calc(50% - 1rem);
+                input {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        &-submit {
+            position: unset;
+            margin: 0 auto;
+        }
+    }
+
+    @include maxWidth(477.8px) {
+        &-route,
+        &-date {
+            height: auto;
+            &-item:not(:nth-child(999)) {
+                @include size(100%, 8.4rem);
+            }
+        }
+        &-route {
+            flex-wrap: wrap;
+            gap: 2rem;
+            &-swap-img {
+                transform: rotate(90deg);
+                &:hover {
+                    transform: rotate(calc(180deg + 90deg));
+                }
+            }
+            &-item {
+                input {
+                    font-size: 1.8rem;
+                }
+                label {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+        &-date {
+            flex-wrap: wrap;
+            gap: 2rem;
+            &::after {
+                @include size(100%, 1px);
+            }
+        }
+        &-submit {
+            padding: 1.2rem;
+            &-icon {
+                font-size: 1.4rem;
+            }
+            &-text {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

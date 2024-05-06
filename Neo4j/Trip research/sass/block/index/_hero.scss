@@ -1,0 +1,30 @@
+.hero {
+    position: relative;
+    &-swipe-slide {
+        height: 38rem;
+        background-image: url(./../images/home-header-hero.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @include maxWidth(969.8px) {
+        &-swipe-slide {
+            height: 25rem;
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-swipe-slide {
+            height: 20rem;
+        }
+    }
+    @include maxWidth(599.8px) {
+        &-swipe-slide {
+            height: 18rem;
+        }
+    }
+    @include maxWidth(499.8px) {
+        &-swipe-slide {
+            height: 15rem;
+        }
+    }
+}

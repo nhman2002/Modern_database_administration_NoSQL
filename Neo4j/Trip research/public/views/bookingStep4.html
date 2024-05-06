@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/bookingStep4.css">
+    <!-- Create Header -->
+    <script type="module" src="./../scripts/header.js"></script>
+</head>
+
+<body class="wrapper">
+    <!-- header -->
+    <my-header></my-header>
+    <!-- topic -->
+    <section class="topic">
+        <div class="mini-container">
+            <h2 class="topic-title">thanh toán</h2>
+        </div>
+    </section>
+    <!-- step bar -->
+    <my-step-bar-fourth></my-step-bar-fourth>
+    <!-- ticket information -->
+    <section class="ticket">
+        <div class="container">
+            <div class="ticket-wrapper">
+                <h3 class="ticket-title">thông tin mua vé</h3>
+                <div class="ticket-customer ticket-block">
+                    <div class="ticket-customer-sub">Thông tin hành khách</div>
+                    <div class="ticket-block-list ticket-customer-list">
+                        <div class="ticket-block-item ticket-customer-name">
+                            <p class="ticket-block-label">Họ tên:</p>
+                            <p class="ticket-block-value ticket-customer-name-value">Nguyễn Ngọc Huy</p>
+                        </div>
+                        <div class="ticket-block-item ticket-customer-email">
+                            <p class="ticket-block-label">Email: </p>
+                            <p class="ticket-block-value ticket-customer-email-value">huynguyenffn@gmail.com</p>
+                        </div>
+                        <div class="ticket-block-item ticket-customer-phone">
+                            <p class="ticket-block-label">Số điện thoại: </p>
+                            <p class="ticket-block-value ticket-customer-phone-value">0968963859</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-route ticket-block">
+                    <div class="ticket-route-sub">
+                        Thông tin chuyến:
+                        <div class="ticket-route-sub-start">bac binh minh</div>
+                        &#8594;
+                        <div class="ticket-route-sub-end">sai gon</div>
+                    </div>
+                    <div class="ticket-block-list ticket-route-list">
+                        <div class="ticket-block-item ticket-route-routes">
+                            <p class="ticket-block-label">Tuyến xe:</p>
+                            <p class="ticket-block-value ticket-route-routes-value">
+                                <span class="ticket-route-routes-departure">bac binh minh</span>
+                                &#8594;
+                                <span class="ticket-route-routes-destination">sai gon</span>
+                            </p>
+                        </div>
+                        <div class="ticket-block-item ticket-route-count">
+                            <p class="ticket-block-label">Số lượng ghế:</p>
+                            <p class="ticket-block-value ticket-route-count-value">3</p>
+                        </div>
+                        <div class="ticket-block-item ticket-route-time">
+                            <p class="ticket-block-label">Thời gian: </p>
+                            <p class="ticket-block-value ticket-route-time-value">
+                                <span class="ticket-route-time-times">01:00</span>
+                                <span class="ticket-route-time-date">23/03/2022</span>
+                            </p>
+                        </div>
+                        <div class="ticket-block-item ticket-route-seats">
+                            <p class="ticket-block-label">Số ghế: </p>
+                            <p class="ticket-block-value ticket-route-seats-value">
+                                <span class="ticket-route-seats-item">B10</span>
+                                ,
+                                <span class="ticket-route-seats-item">A12</span>
+                                ,
+                                <span class="ticket-route-seats-item">A07</span>
+                            </p>
+                        </div>
+                        <div class="ticket-block-item ticket-route-pickup">
+                            <p class="ticket-block-label">Điểm lên xe:</p>
+                            <p class="ticket-block-value ticket-route-pickup-value">
+                                VP Sa Tra: Ấp Hòa Phúc, Xá Hòa Khánh, H. Cái Bè , Tiền Giang
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-cost">
+                    <p class="ticket-cost-sub">tổng tiền</p>
+                    <p class="ticket-cost-value">405.000<span>&#8363;</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- payment method -->
+    <section class="payment">
+        <div class="container">
+            <h4 class="payment-title">chọn cách thanh toán</h4>
+            <ul class="payment-list">
+                <li class="payment-item payment-type-international">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-jcb.png" alt="" class="payment-image">
+                        <img src="./../images/booking4-payment-master.png" alt="" class="payment-image">
+                        <img src="./../images/booking4-payment-visa.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">Thẻ Quốc tế Visa/Master/JCB</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+                <li class="payment-item payment-type-inland">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-napas.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">Thẻ ATM Nội địa</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+                <li class="payment-item">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-futapay.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">Tài khoản FUTA Bus</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+                <li class="payment-item">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-momo.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">ThVí MoMo</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+                <li class="payment-item">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-zalopay.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">Ví ZaloPay</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+                <li class="payment-item">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-vnpay.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">VNPay</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+                <li class="payment-item">
+                    <div class="payment-card">
+                        <img src="./../images/booking4-payment-shopee.png" alt="" class="payment-image">
+                    </div>
+                    <div class="payment-des">Ví ShopeePay</div>
+                    <input type="radio" name="choose-payment-method" id="" class="payment-radio">
+                </li>
+            </ul>
+            <div class="payment-linking">
+                <p class="payment-linking-text">Danh sách ngân hàng liên kết:</p>
+                <ul class="payment-international">
+                    <li class="payment-international-item">
+                        <img src="./../images/booking4-payment-jcblast.png" alt="">
+                    </li>
+                    <li class="payment-international-item">
+                        <img src="./../images/booking4-payment-mastercard.png" alt="">
+                    </li>
+                    <li class="payment-international-item">
+                        <img src="./../images/booking4-payment-visabottom.png" alt="">
+                    </li>
+                </ul>
+                <ul class="payment-inland">
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-acb.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-bidv.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietink.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-martin.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-kienlong.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-saccombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-acb.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-bidv.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietink.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-martin.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-kienlong.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-saccombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-acb.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-bidv.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietink.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-martin.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-kienlong.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-saccombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-acb.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-bidv.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietink.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-martin.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-kienlong.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-acb.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-bidv.png" alt="">
+
+                    </li>
+                    <li class="payment-inland-item">
+                        <img src="./../images/booking4-payment-vietcombank.png" alt="">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- step nav -->
+    <section class="step-nav">
+        <div class="mini-container">
+            <div class="step-nav-control">
+                <div class="step-nav-button step-prev-btn">
+                    <i class="fa-solid fa-angle-left"></i>
+                    Quay lại
+                </div>
+                <div class="step-nav-button step-pay-btn">
+                    Thanh toán
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- error -->
+    <section class="error">
+        <ul class="error-list">
+            <li class="error-item">fs</li>
+        </ul>
+    </section>
+    <!-- footer -->
+    <my-footer></my-footer>
+    <script type="module" src="./../scripts/stepBar.js"></script>
+    <script type="module" src="./../scripts/footer.js"></script>
+    <script src="./../scripts/bookingStep4.js"></script>
+    <script src="./../scripts/validation_booking4.js"></script>
+</body>
+
+</html>

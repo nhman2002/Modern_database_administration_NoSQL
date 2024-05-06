@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/bookingStep1.css">
+    <!-- Create Header -->
+    <script type="module" src="./../scripts/header.js"></script>
+</head>
+
+<body class="wrapper">
+    <my-header></my-header>
+    <!-- topic -->
+    <section class="topic">
+        <div class="mini-container">
+            <h2 class="topic-content">chọn tuyến</h2>
+        </div>
+    </section>
+    <!-- step bar -->
+    <my-step-bar></my-step-bar>
+    <!-- booking -->
+    <section class="booking">
+        <div class="container">
+            <div class="booking-box">
+                <form class="booking-form main-form">
+                    <div class="booking-options">
+                        <div class="form-group booking-form-group booking-options-one-way">
+                            <input type="radio" name="type-of-way" id="options-one-way" checked></input>
+                            <label for="options-one-way">Một chiều</label>
+                        </div>
+                        <div class="form-group booking-form-group booking-options-two-way">
+                            <input type="radio" name="type-of-way" id="options-two-way"></input>
+                            <label for="options-two-way">Khứ hồi</label>
+                        </div>
+                    </div>
+                    <div class="booking-infor">
+                        <div class="booking-route">
+                            <div class="booking-route-swap"><img src="./../images/home-booking-swap.png" alt=""
+                                    class="booking-route-swap-img">
+                            </div>
+                            <div class="form-group booking-form-group booking-route-item booking-route-departure">
+                                <label for="route-departure">Điểm đi</label>
+                                <input type="text" id="route-departure" placeholder="Chọn điểm đi">
+                            </div>
+                            <div class="form-group booking-form-group booking-route-item booking-route-destination">
+                                <label for="route-destination">Điểm đến</label>
+                                <input type="text" id="route-destination" placeholder="Chọn điểm đến">
+                            </div>
+                        </div>
+                        <div class="booking-date">
+                            <div class="form-group booking-form-group booking-date-item booking-date-departure">
+                                <label for="date-departure">Ngày đi</label>
+                                <input type="date" name="" id="date-departure">
+                            </div>
+                            <div class="form-group booking-form-group booking-date-item booking-date-destination">
+                                <label for="date-destination">Ngày về</label>
+                                <input type="date" name="" id="date-destination" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="booking-submit form-submit-button" type="submit">
+                        <i class="fa-solid fa-magnifying-glass booking-submit-icon"></i>
+                        <span class="booking-submit-text">tìm chuyến xe</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- error -->
+    <section class="error">
+        <ul class="error-list">
+            <li class="error-item">fs</li>
+        </ul>
+    </section>
+    <!-- information -->
+    <section class="information">
+        <div class="container">
+            <div class="information-tab">
+                <div class="information-tab-item public-info tab-active">thông tin chung</div>
+                <div class="information-tab-item pickup-point">điểm đón xe</div>
+                <div class="information-tab-item ship-point">điểm trung chuyển</div>
+            </div>
+            <div class="information-content">
+                <div class="information-content-block public-info-content content-active">
+                    <div class="information-route information-content-item">
+                        <div class="information-route-start">bình minh</div>
+                        <span>&#8594;</span>
+                        <div class="information-route-end">TP.Hồ Chí Minh</div>
+                    </div>
+                    <div class="information-distance information-content-item">
+                        <span class="information-distance-title information-content-title">Khoảng cách: </span>
+                        <span class="information-distance-value">159 Km</span>
+                    </div>
+                    <div class="information-timespan information-content-item">
+                        <span class="information-timespan-title information-content-title">Thời gian: </span>
+                        <span class="information-timespan-value">3 giờ 15 phút</span>
+                    </div>
+                    <div class="information-station information-content-item">
+                        <span class="information-station-title information-content-title">Bến đi:</span>
+                        <span class="information-station-value">VP Vĩnh Long, 1E Đinh Tiên Hoàng , P.8 , TP.Vĩnh
+                            Long</span>
+                    </div>
+                    <div class="information-station information-content-item">
+                        <span class="information-station-title information-content-title">Bến đi:</span>
+                        <span class="information-station-value">VP Bình Minh, Khóm 2 , P.Thành Phước , TX.Bình Minh ,
+                            tỉnh Vĩnh Long</span>
+                    </div>
+                    <div class="information-station information-content-item">
+                        <span class="information-station-title information-content-title">Bến đi:</span>
+                        <span class="information-station-value">Lô 27-28-29 Khu ĐT mới Song Phú, Ấp Phú Thịnh, Xã SP, Q
+                            Tam Bình,T.VL</span>
+                    </div>
+                    <div class="information-station information-content-item">
+                        <span class="information-station-title information-content-title">Bến đi:</span>
+                        <span class="information-station-value">VP Sa Tra: Ấp Hòa Phúc, Xá Hòa Khánh, H. Cái Bè , Tiền
+                            Giang</span>
+                    </div>
+                    <div class="information-note information-content-item">
+                        * Lưu ý: thời gian đón và trung chuyển xe có thể thay đổi phụ thuộc vào mật độ giao thông tại
+                        từng thời điểm. Kính mong quý hành khách thông cảm!
+                    </div>
+                </div>
+                <div class="information-content-block pickup-point-content">
+                    <p class="information-content-updating">Đang cập nhật ...</p>
+                </div>
+                <div class="information-content-block ship-point-content">
+                    <p class="information-content-updating">Updating ...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <my-footer></my-footer>
+    <!-- Create Footer -->
+    <script type="module" src="./../scripts/stepBar.js"></script>
+    <script type="module" src="./../scripts/footer.js"></script>
+    <script type="module" src="./../scripts/index.js"></script>
+    <script src="./../scripts/informationBookingStep1.js"></script>
+    <!-- Validation -->
+    <script src="./../scripts/validation_index.js"></script>
+</body>
+
+</html>

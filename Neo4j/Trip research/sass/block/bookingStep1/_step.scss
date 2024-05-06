@@ -1,0 +1,101 @@
+.step {
+    &-bar {
+        position: relative;
+        margin: 0 2.5rem;
+    }
+    &-number {
+        @include flexBox(flex, center, space-between);
+        &-item {
+            position: relative;
+            max-width: 10rem;
+            text-align: center;
+        }
+        &-processing {
+            .step-number-circles {
+                border: 2px solid $primary-color;
+                color: $primary-color;
+            }
+            .step-number-title {
+                color: $primary-color;
+            }
+        }
+        &-completed {
+            .step-number-circles {
+                color: white;
+                background-color: $primary-color;
+            }
+            .step-number-title {
+                color: $primary-color;
+            }
+        }
+        &-waiting {
+            .step-number-circles {
+                color: $text-color;
+                background-color: $step-bg-color;
+                border: 2px solid $step-bg-color;
+            }
+            .step-number-title {
+                color: $text-color;
+            }
+        }
+        &-circles {
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            @include size(3.2rem);
+            background-color: $step-bg-color;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            z-index: 2;
+        }
+        &-title {
+            width: 10rem;
+            @include positionElement("center");
+            top: -2.5rem;
+            @include letterSpace(0.05rem);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+    &-line {
+        width: 100%;
+        @include flexBox(flex, center, space-between);
+        @include positionElement("center");
+        &-item {
+            display: block;
+            @include size(calc(100% / 3), 0.5rem);
+            background-color: $step-bg-color;
+            &-completed {
+                background-color: $primary-color;
+            }
+            &-waiting {
+                background-color: $step-bg-color;
+            }
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-number {
+            &-title {
+                font-size: 1rem;
+                line-height: 1.5;
+                top: -1.8rem;
+            }
+            &-circles {
+                @include size(2.8rem);
+            }
+        }
+    }
+    @include maxWidth(375.8px) {
+        &-number {
+            &-title {
+                font-size: 0.9rem;
+                width: 6.7rem;
+            }
+            &-circles {
+                @include size(2.8rem);
+            }
+        }
+    }
+}

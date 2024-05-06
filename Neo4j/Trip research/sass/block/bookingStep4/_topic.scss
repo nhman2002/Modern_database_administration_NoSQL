@@ -1,0 +1,13 @@
+.topic {
+    font-family: "SFProVietsub";
+    text-align: left;
+    font-size: 2.4rem;
+    @include letterSpace(0.05rem);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $title-color;
+    margin: 2.5rem 0 8rem 0;
+    @include maxWidth(767.8px) {
+        font-size: 2rem;
+    }
+}

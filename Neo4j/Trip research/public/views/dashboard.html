@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/dashboard.css">
+</head>
+
+<body class="wrapper">
+    <section class="sidebar">
+        <a href="#" class="sidebar-logo">
+            <img src="./../images/home-img-logo.png" alt="" class="sidebar-logo-img">
+            <img src="./../images/sidebar-mini-logo.png" alt="" class="sidebar-logo-mini">
+        </a>
+        <ul class="sidebar-list">
+            <li class="sidebar-item sidebar-active">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-dashboard sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-user-account sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">customer</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-credit-card-front sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">ticket</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-business sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">route</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='fa-solid fa-calendar-days sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">schedule</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='fa-solid fa-bus sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">futa bus</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-bar-chart-alt-2 sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">analytics</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-user-pin sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">staff</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-cog sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">settings</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <div class="main">
+        <div class="main-overlay"></div>
+        <header class="header">
+            <div class="header-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="header-search">
+                <input type="text" class="header-search-input" placeholder="Tìm kiếm ở đây ...">
+                <i class='bx bx-search header-search-icon'></i>
+            </div>
+            <div class="header-user">
+                <img src="https://media.istockphoto.com/photos/steamed-octopus-for-sashimi-picture-id1165598498?b=1&k=20&m=1165598498&s=170667a&w=0&h=8-oKrycjOj5wqzNyTuKrP3aJ6faLbFq2y80QvCJ37Z0="
+                    alt="" class="header-user-avatar">
+                <div class="header-user-info">
+                    <h3 class="header-user-name">Sin Takodachi</h3>
+                    <p class="header-user-position">Member Tentacles</p>
+                </div>
+                <div class="header-user-notify">
+                    <div class="header-user-notify-number">5</div>
+                    <i class='bx bxs-bell'></i>
+                </div>
+                <div class="header-profile">
+                    <div class="header-profile-top">
+                        <div class="header-profile-wel">
+                            <p class="header-profile-hi">Hi Takodachi</p>
+                            <p class="header-profile-subhi">Good Morning!</p>
+                        </div>
+                        <div class="header-profile-cog"><i class='bx bx-cog'></i></div>
+                    </div>
+                    <div class="header-profile-avatar">
+                        <img src="https://media.istockphoto.com/photos/steamed-octopus-for-sashimi-picture-id1165598498?b=1&k=20&m=1165598498&s=170667a&w=0&h=8-oKrycjOj5wqzNyTuKrP3aJ6faLbFq2y80QvCJ37Z0="
+                            alt="">
+                        <p class="header-profile-name">Sin Takodachi</p>
+                        <p class="header-profile-position">UX/UI Design - Front Dev</p>
+                    </div>
+                    <ul class="header-profile-notify">
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="performance">
+            <div class="performance-top">
+                <h4 class="dashboard-title">dashboard</h4>
+                <ul class="performance-list">
+                    <li class="performance-item">
+                        <i class='bx bx-group performance-item-icon'></i>
+                        <div class="performance-item-content">
+                            <p class="performance-item-number">549,99</p>
+                            <p class="performance-item-des">Total Takodachi</p>
+                        </div>
+                    </li>
+                    <li class="performance-item">
+                        <i class='bx bx-credit-card-front performance-item-icon'></i>
+                        <div class="performance-item-content">
+                            <p class="performance-item-number">549,99</p>
+                            <p class="performance-item-des">Total Takodachi</p>
+                        </div>
+                    </li>
+                    <li class="performance-item">
+                        <i class='bx bx-bus performance-item-icon'></i>
+                        <div class="performance-item-content">
+                            <p class="performance-item-number">549,99</p>
+                            <p class="performance-item-des">Total Takodachi</p>
+                        </div>
+                    </li>
+                    <li class="performance-item">
+                        <i class='bx bx-buildings performance-item-icon'></i>
+                        <div class="performance-item-content">
+                            <p class="performance-item-number">549,99</p>
+                            <p class="performance-item-des">Total Takodachi</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="performance-statistic">
+                    <div class="performance-chart"></div>
+                    <div class="performance-pie"></div>
+                </div>
+            </div>
+        </section>
+        <section class="access access-table">
+            <h4 class="dashboard-title">process tasks</h4>
+            <div class="access-table-wrapper">
+                <table class="access-tasks">
+                    <tr class="access-head">
+                        <th class="access-head-id">task id</th>
+                        <th class="access-head-staff">staff</th>
+                        <th class="access-head-point">total point</th>
+                        <th class="access-head-date">date</th>
+                        <th class="access-head-status">status</th>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO08</td>
+                        <td class="access-row-staff">Calliope Mori</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-process"><span>Process</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO09</td>
+                        <td class="access-row-staff">Takanashi Kiara</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-pending"><span>pending</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO10</td>
+                        <td class="access-row-staff">Gawr Gura</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-review"><span>review</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO11</td>
+                        <td class="access-row-staff">Ninomae Ina'nis</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-completed"><span>completed</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO12</td>
+                        <td class="access-row-staff">Amelia Waston</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-cancel"><span>cancel</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO08</td>
+                        <td class="access-row-staff">Calliope Mori</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-process"><span>Process</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO09</td>
+                        <td class="access-row-staff">Takanashi Kiara</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-pending"><span>pending</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO10</td>
+                        <td class="access-row-staff">Gawr Gura</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-review"><span>review</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO11</td>
+                        <td class="access-row-staff">Ninomae Ina'nis</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-completed"><span>completed</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO12</td>
+                        <td class="access-row-staff">Amelia Waston</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-cancel"><span>cancel</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO08</td>
+                        <td class="access-row-staff">Calliope Mori</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-process"><span>Process</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO09</td>
+                        <td class="access-row-staff">Takanashi Kiara</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-pending"><span>pending</span></td>
+                    </tr>
+                    <tr class="access-row">
+                        <td class="access-row-id">TAKO10</td>
+                        <td class="access-row-staff">Gawr Gura</td>
+                        <td class="access-row-point">$549.99</td>
+                        <td class="access-row-date">25 March 2022</td>
+                        <td class="access-row-status status-on-review"><span>review</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.33.2/apexcharts.min.js"
+        integrity="sha512-iBEfFld2z1SAXCPmgoA40VQtqGP0cEJw4fy+t3ARW30uEfzf8hyrmm4mc5qdth3wZRPdKTv/auk5WH52klRVDg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./../vendors/apexcharts.js"></script>
+    <script src="./../scripts/dashboardMenu.js"></script>
+</body>
+
+</html>

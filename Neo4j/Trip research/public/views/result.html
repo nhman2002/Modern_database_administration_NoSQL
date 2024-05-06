@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    {% if result %}
+        {% if result.trips %}
+            <h2>Trip Details:</h2>
+            <p>Điểm xuất phát:{{ result.locations[0]["name"] }}</p>     
+            <ul>
+                {% for location in result.locations %}                
+                    {% if result.trips is defined and loop.index < result.trips|length %}
+                        <br>------------------------
+                        <li><b>{{ result.locations[loop.index]["name"] }}</b></li>
+                        <li>Loại: {{ result.trips[loop.index]["type"] }}</li>
+                        <li>Khoảng cách: {{ result.trips[loop.index]["distance"] }}</li>
+                        <li>Tổng thời gian: {{ result.trips[loop.index]["duration"] }}</li>
+                        <li><b>{{ result.locations[loop.index+1]["name"] }}</b></li>
+                    {% endif %}    
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No direct trips found. Showing nearest trip:</p>
+            <h2>Nearest Trip Details:</h2>
+            <ul>
+                <li>Source: {{ result.locations[0]["name"] }}</li>
+                <li>Destination: {{ result.locations[-1]["name"] }}</li>
+                <li>Distance: {{ distance }} km</li>
+            </ul>
+        {% endif %}
+    {% else %}
+        <p>No trips found.</p>
+    {% endif %}
+    <a href="/">Back to Search</a>
+</body>
+</html>

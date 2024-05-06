@@ -1,0 +1,72 @@
+.banner {
+    margin-bottom: 2rem;
+    &-swiper {
+        position: relative;
+        &-link {
+            display: block;
+            height: 21.5rem;
+        }
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &-pagination {
+            span {
+                @include size(1rem);
+                background-color: white;
+            }
+        }
+        &-button {
+            padding: 2rem;
+            color: white;
+            &::after {
+                font-size: 3rem;
+                font-weight: bolder;
+            }
+        }
+    }
+    @include maxWidth(599.8px) {
+        &-swiper {
+            &-link {
+                height: 15rem;
+            }
+            &-img {
+                object-fit: fill;
+            }
+            &-pagination {
+                span {
+                    @include size(0.8rem);
+                }
+            }
+            &-button {
+                display: none;
+            }
+        }
+    }
+    @include maxWidth(477.8px) {
+        &-swiper {
+            &-link {
+                height: 10rem;
+            }
+            &-img {
+                object-fit: fill;
+            }
+            &-pagination {
+                span {
+                    @include size(0.8rem);
+                }
+            }
+        }
+    }
+    @include maxWidth(417.8px) {
+        &-swiper {
+            &-link {
+                height: auto;
+            }
+            &-img {
+                object-fit: fill;
+            }
+        }
+    }
+}

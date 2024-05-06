@@ -1,0 +1,527 @@
+.route {
+    &-topic {
+        font-size: 18px;
+        font-weight: 100;
+        margin-bottom: 18px;
+        padding: 0 16px;
+        color: $text-content-color;
+        @include letterSpace(0.05rem);
+        margin-bottom: 2.5rem;
+    }
+    &-item {
+        background-color: white;
+        padding: 3rem 2rem 5rem 2rem;
+        border-radius: 8px;
+        border: 1px solid $border-route-color;
+        margin-bottom: 20px;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        &.route-choosing {
+            border: 2px solid $primary-color;
+            .route-schedule,
+            .route-seat {
+                display: block;
+            }
+            .route-result {
+                display: flex;
+            }
+        }
+    }
+    &-head {
+        position: relative;
+        &-top {
+            @include flexBox(flex, center, space-between);
+            margin-bottom: 2rem;
+        }
+        &-timespan {
+            @include flexBox(flex, center);
+            column-gap: 1rem;
+        }
+        &-timestart,
+        &-timeend {
+            font-size: 2.5rem;
+            @include letterSpace(0.05rem);
+            color: $title-color;
+        }
+        &-arrow {
+            @include size(2.9rem, 0.8rem);
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+        &-service {
+            @include flexBox(flex, center);
+            column-gap: 1rem;
+            i {
+                font-size: 1.3rem;
+                color: $icon-route-color;
+            }
+        }
+        &-des {
+            @include flexBox(flex, center, center);
+            column-gap: 1.8rem;
+            font-size: 1.5rem;
+            @include letterSpace(0.05rem);
+            color: $dot-color;
+            border-radius: 1.6rem;
+            padding: 0.8rem 1.2rem;
+            max-width: 32rem;
+            background-color: $wrapper-text-bg;
+            margin-bottom: 1.5rem;
+            div {
+                color: $text-bold-color;
+            }
+        }
+        &-detail {
+            @include flexBox(flex);
+            column-gap: 1.7rem;
+        }
+        &-content-detail {
+            padding: 0.3rem 0;
+            div:not(:last-child) {
+                margin-bottom: 2.2rem;
+            }
+        }
+        &-line-place {
+            position: relative;
+            @include flexBox(flex, center, space-between, column);
+            i {
+                font-size: 1.6rem;
+                color: $secondary-color;
+                position: relative;
+                z-index: 1;
+                &:last-child {
+                    font-size: 1.95rem;
+                    color: $primary-color;
+                }
+                background-color: white;
+            }
+        }
+        &-line-connect {
+            @include positionElement("center");
+            height: 100%;
+            width: 0.2rem;
+            right: 0.2rem;
+            border-left: 0.24rem dotted $border-dotted-color;
+        }
+        &-departure,
+        &-destination {
+            font-size: 1.5rem;
+            @include letterSpace(0.05rem);
+            color: $text-bold-color;
+            text-transform: capitalize;
+        }
+        &-content {
+            @include flexBox(flex, center);
+            @include letterSpace(0.05rem);
+            font-size: 1.3rem;
+            color: $secondary-color;
+            span {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    &-button {
+        position: absolute;
+        right: 0;
+        top: 10rem;
+        @include flexBox(flex, center, flex-start, column);
+        row-gap: 0.6rem;
+        input[type="checkbox"] {
+            @include size(2.5rem);
+            appearance: none;
+            cursor: pointer;
+            position: relative;
+            background-color: white;
+            border: 2px solid $icon-route-color;
+            border-radius: 50%;
+            overflow: hidden;
+            &:checked {
+                border: none;
+                background-color: $primary-color;
+                & + label {
+                    color: $primary-color;
+                }
+            }
+            &:checked::after {
+                display: inline-block;
+                content: "\2713";
+                border-radius: 50%;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: white;
+                @include positionElement("center", absolute);
+            }
+        }
+        label {
+            color: $secondary-normal-color;
+            @include letterSpace(0.05rem);
+            font-size: 1.3rem;
+        }
+    }
+    &-schedule {
+        max-width: 47rem;
+        margin: 2.5rem auto 1.5rem;
+        background-color: $route-schedule-bg;
+        border: 1px solid $route-schedule-border;
+        border-radius: 0.8rem;
+        display: none;
+        &-title {
+            padding: 2rem 1.5rem;
+            color: $primary-color;
+            font-family: "SFProVietsub";
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            @include letterSpace(0.05rem);
+            cursor: pointer;
+        }
+        &-list {
+            padding: 1.5rem 2rem 4.5rem;
+            @include flexBox(flex, stretch, flex-start, column);
+            row-gap: 3.8rem;
+            display: none;
+            &.route-schedule-active {
+                display: flex;
+            }
+        }
+        &-item {
+            @include flexBox(flex, flex-start);
+            column-gap: 2.5rem;
+            &:last-child i {
+                padding: 0.2rem;
+                font-size: 1.85rem;
+                color: $secondary-color;
+            }
+        }
+        &-des {
+            p:first-child {
+                min-width: 13.5rem;
+                flex-shrink: 1;
+            }
+            p {
+                font-size: 1.5rem;
+                @include letterSpace(0.05rem);
+                color: $text-bold-color;
+            }
+        }
+        &-time {
+            flex-shrink: 1;
+            @include flexBox(flex, flex-start, flex-start);
+            font-size: 1.5rem;
+            color: $text-schedule-color;
+            @include letterSpace(0.05rem);
+            i {
+                font-size: 2.5rem;
+                color: $schedule-icon-color;
+                margin-top: -0.5rem;
+            }
+        }
+        &-date {
+            display: block;
+            margin: 0 0.5rem;
+        }
+        &-content {
+            @include letterSpace(0.05rem);
+        }
+        &-place {
+            font-size: 1.5rem;
+            color: $text-bold-color;
+            text-transform: capitalize;
+            margin-bottom: 0.7rem;
+        }
+        &-location {
+            font-size: 1.3rem;
+        }
+    }
+    &-seat {
+        display: none;
+        max-width: 59rem;
+        border: 1px solid $route-schedule-border;
+        border-radius: 0.8rem;
+        margin: 0 auto;
+        &-title {
+            @include flexBox(flex, center);
+            font-size: 14px;
+            @include letterSpace(0.05rem);
+            color: $text-schedule-color;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: #fff;
+            div {
+                cursor: pointer;
+                width: 50%;
+                padding: 2rem 0;
+                @include flexBox(flex, center, center);
+                column-gap: 1rem;
+                i {
+                    font-size: 1.8rem;
+                    display: none;
+                }
+            }
+        }
+        &-floor {
+            @include flexBox();
+            padding: 3rem 0;
+            background-color: $route-schedule-bg;
+        }
+        &-floor-item {
+            padding: 0 1.5rem;
+            width: 50%;
+        }
+        &-table {
+            @include flexBox(flex, stretch, flex-start, column);
+            row-gap: 1.2rem;
+            width: 100%;
+            tbody {
+                @include flexBox(flex, stretch, flex-start, column);
+                row-gap: 1.2rem;
+                width: 100%;
+            }
+        }
+        &-row {
+            width: 100%;
+            @include flexBox(flex, center, space-between);
+            svg {
+                text {
+                    display: block;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    font-family: "SFProVietsub";
+                    font-weight: 100;
+                    text-align: center;
+                    stroke: $text-color;
+                }
+                rect {
+                    fill: $bg-seat-empty-color;
+                    stroke: $border-seat-empty-color;
+                }
+            }
+        }
+        &-item {
+            &.seat-empty {
+                cursor: pointer;
+                svg {
+                    text {
+                        user-select: none;
+                        display: block;
+                        width: 100%;
+                        font-size: 1.4rem;
+                        font-family: "SFProVietsub";
+                        font-weight: 100;
+                        text-align: center;
+                        stroke: $text-color;
+                    }
+                    rect {
+                        fill: $bg-seat-empty-color;
+                        stroke: $border-seat-empty-color;
+                    }
+                }
+            }
+            &.seat-active {
+                cursor: pointer;
+                svg {
+                    text {
+                        user-select: none;
+                        display: block;
+                        width: 100%;
+                        font-size: 1.4rem;
+                        font-family: "SFProVietsub";
+                        font-weight: 100;
+                        text-align: center;
+                        stroke: $text-color;
+                    }
+                    rect {
+                        fill: $bg-seat-active-color;
+                        stroke: $border-seat-active-color;
+                    }
+                }
+            }
+            &.seat-disable {
+                cursor: not-allowed;
+                svg {
+                    text {
+                        user-select: none;
+                        display: block;
+                        width: 100%;
+                        font-size: 1.4rem;
+                        font-family: "SFProVietsub";
+                        font-weight: 100;
+                        text-align: center;
+                        stroke: $text-color;
+                    }
+                    rect {
+                        fill: $bg-seat-disable-color;
+                        stroke: $border-seat-disable-color;
+                    }
+                }
+            }
+        }
+        &-note {
+            @include flexBox(flex, center, space-evenly);
+            background-color: $route-schedule-bg;
+            padding-bottom: 1.5rem;
+        }
+        &-e-item,
+        &-a-item,
+        &-d-item {
+            @include flexBox(flex, center);
+            column-gap: 0.7rem;
+            p {
+                font-size: 1.4rem;
+                @include letterSpace(0.05rem);
+                color: $text-color;
+            }
+        }
+        &-e-box {
+            @include size(2rem);
+            border-radius: 4px;
+            border: 1px solid $border-seat-empty-color;
+            background-color: $bg-seat-empty-color;
+        }
+        &-a-box {
+            @include size(2rem);
+            border-radius: 4px;
+            border: 1px solid $border-seat-active-color;
+            background-color: $bg-seat-active-color;
+        }
+        &-d-box {
+            @include size(2rem);
+            border-radius: 4px;
+            border: 1px solid $border-seat-disable-color;
+            background-color: $bg-seat-disable-color;
+        }
+    }
+    &-result {
+        @include flexBox(flex, center, space-between);
+        margin-top: 2rem;
+        display: none;
+        &-ticket {
+            @include flexBox(flex, center);
+            column-gap: 0.5rem;
+            font-size: 1.5rem;
+            color: $text-schedule-color;
+            margin-bottom: 1rem;
+        }
+        &-name {
+            column-gap: 0.5rem;
+            font-size: 1.5rem;
+        }
+        &-cost {
+            @include flexBox(flex, baseline);
+            column-gap: 0.5rem;
+            &-title {
+                font-size: 1.5rem;
+                color: $text-schedule-color;
+            }
+            &-value {
+                display: flex;
+                column-gap: 0.5rem;
+                font-family: "SFProVietsub";
+                font-weight: 300;
+                font-size: 1.9rem;
+                color: $text-bold-color;
+                @include letterSpace(0.05rem);
+                span {
+                    font-size: 1.5rem;
+                    align-self: flex-start;
+                }
+            }
+        }
+        &-button {
+            border-radius: 2.4rem;
+            font-size: 1.6rem;
+            @include letterSpace(0.05rem);
+            color: white;
+            background-color: $primary-color;
+            text-align: center;
+            @include flexBox(flex, center, space-between);
+            cursor: pointer;
+            p {
+                padding: 1.5rem 12rem;
+            }
+            i {
+                padding-right: 1.5rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-seat {
+            &-title {
+                div.seat-title-active {
+                    color: $primary-color;
+                    border-bottom: 0.1rem solid $primary-color;
+                }
+                div {
+                    i {
+                        display: block;
+                    }
+                }
+            }
+            &-floor {
+                justify-content: center;
+            }
+            &-floor-item {
+                width: 100%;
+                &.this-floor-not {
+                    display: none;
+                }
+            }
+        }
+        &-result {
+            &-button {
+                padding: 1.5rem 2.5rem;
+                p {
+                    padding: 0;
+                }
+                i {
+                    font-size: 1.6rem;
+                    padding-left: 1.5rem;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    @include maxWidth(479.8px) {
+        &-item {
+            padding-bottom: 3.5rem;
+        }
+        &-head {
+            &-des {
+                column-gap: 0.5rem;
+                justify-content: flex-start;
+                width: 100%;
+                @include letterSpace(0);
+            }
+        }
+        &-seat {
+            &-item {
+                svg {
+                    transform: scale(0.8);
+                }
+            }
+            &-e-item,
+            &-a-item,
+            &-d-item {
+                width: calc(50% - 2rem / 3);
+            }
+            &-note {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 1rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        &-result {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 2rem;
+            &-button {
+                align-self: flex-end;
+            }
+        }
+    }
+}

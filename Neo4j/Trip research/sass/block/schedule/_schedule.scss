@@ -1,0 +1,223 @@
+.schedule-none .schedule-none-value {
+    display: block;
+}
+.schedule {
+    margin-bottom: 2.5rem;
+    table,
+    thead,
+    tbody {
+        display: block;
+    }
+    tr {
+        @include flexBox(flex, center, space-between, row, wrap);
+        width: 100%;
+    }
+    th,
+    td {
+        text-align: center;
+    }
+
+    &-none-value {
+        display: none;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+        background-image: radial-gradient(at center top, rgb(239, 82, 34), transparent),
+            radial-gradient(at center bottom, rgb(239, 82, 34), transparent);
+    }
+
+    &-head-row,
+    &-item-datarow,
+    &-item-head-responsive {
+        padding: 0 6rem 0 2.5rem;
+    }
+    &-head {
+        width: 100%;
+        color: $text-content-color;
+        font-weight: 700;
+        background-color: $component-bg-color;
+        border: 1px solid $border-table-color;
+        line-height: 1.5;
+        &-row {
+            min-height: 4rem;
+        }
+        &-item {
+            width: calc(100% / 7);
+        }
+    }
+    &-body {
+        height: 67rem;
+        overflow-y: overlay;
+        @include customScroll(1rem, $primary-color);
+        border: 1px solid $border-table-color;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+    }
+    &-item {
+        &-head-responsive:not(:nth-child(999)) {
+            display: none;
+            width: 100%;
+            color: $text-content-color;
+            font-weight: 700;
+            line-height: 2.5;
+        }
+        &-head-row:not(:nth-child(999)) {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-primary {
+            width: 100%;
+            background-color: rgba($primary-color, 0.04);
+        }
+        &-start {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $primary-color;
+            text-transform: capitalize;
+            @include letterSpace(0.05rem);
+            padding: 1.5rem 0;
+        }
+        &-data {
+            width: calc(100% / 7);
+            font-size: 1.4rem;
+            color: $text-table-color;
+            &:nth-child(1) {
+                text-align: left;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                text-transform: capitalize;
+            }
+            line-height: 1;
+            padding: 1rem 0;
+            background-color: white;
+        }
+        &-d-timestart {
+            color: $secondary-light-color;
+            @include flexBox(flex, center, center);
+            column-gap: 0.5rem;
+            cursor: pointer;
+            & i {
+                display: grid;
+                place-content: center;
+                @include size(1.6rem);
+                border-radius: 50%;
+                font-size: 1.2rem;
+                color: white;
+                background-color: $secondary-light-color;
+            }
+        }
+        &-button {
+            @include flexBox(flex, center);
+            column-gap: 0.5rem;
+            border: 1px solid #c0c6cc;
+            border-radius: 1.5rem;
+            background-color: white;
+            padding: 0.6rem 1.2rem;
+            margin-left: auto;
+            i {
+                color: $primary-color;
+                transition: all 0.3s ease;
+            }
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+                i {
+                    color: white;
+                }
+            }
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-head:not(:nth-child(999)) {
+            display: none;
+        }
+        &-body {
+            border-top: 1px solid $border-table-color;
+            border-radius: 8px;
+        }
+        &-item {
+            display: flex !important;
+            align-items: stretch;
+            justify-content: flex-start;
+            &-head-responsive:not(:nth-child(999)) {
+                display: block;
+                width: 40%;
+                padding-right: 0;
+                border-bottom: 1px solid $border-table-color;
+                th {
+                    text-align: left;
+                    line-height: 1;
+                    &:not(:first-child) {
+                        padding: 1rem 0;
+                    }
+                }
+            }
+            &-t-route {
+                padding: 3rem 0;
+                width: 85%;
+                border-bottom: 1px solid $border-table-color;
+            }
+            &-t-cost {
+                transform: translateY(0.5rem);
+            }
+            &-t-timestart {
+                transform: translateY(1.4rem);
+            }
+            &-body:not(:nth-child(999)) {
+                width: 60%;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            &-primary:not(:nth-child(999)) {
+                padding: 0;
+                display: grid;
+                place-content: center;
+            }
+            &-start {
+                color: white;
+            }
+            &-datarow:not(:nth-child(999)) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba($primary-color, 0.8);
+                padding: 0;
+                &:not(:first-child) {
+                    background-color: rgba($secondary-light-color, 0.1);
+                    border: 1px solid $border-table-color;
+                    &:not(:last-child) {
+                        border-bottom: none;
+                    }
+                }
+            }
+            &-data:not(:nth-child(999)) {
+                width: 100%;
+                background-color: transparent;
+            }
+            &-button:not(:nth-child(999)) {
+                margin: 0 auto;
+            }
+            &-d-cost {
+                display: none;
+            }
+        }
+    }
+    @include maxWidth(479.8px) {
+        &-item {
+            &-head-responsive:not(:nth-child(999)) {
+                display: none;
+            }
+            &-body:not(:nth-child(999)) {
+                width: 100%;
+            }
+        }
+    }
+}

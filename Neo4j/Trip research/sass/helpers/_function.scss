@@ -1,0 +1,12 @@
+// @function renderRecommendImg($count) {
+//     @return $count + ".png";
+// }
+
+// @for $i from 1 through 19 {
+//     &-slide:nth-child(#{$i}) {
+//         background-image: url("./../images/home-recommend-img" + renderRecommendImg($i));
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//     }
+// }

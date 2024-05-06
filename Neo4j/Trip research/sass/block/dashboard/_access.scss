@@ -1,0 +1,115 @@
+.access {
+    padding: 0 2.5rem;
+    margin-bottom: 2.5rem;
+    &-table {
+        width: 100%;
+        &-wrapper {
+            padding: 1rem 0;
+            text-align: left;
+            background-color: white;
+            border-radius: 8px;
+            @include boxShadowAdmin();
+        }
+    }
+    &-tasks {
+        width: 100%;
+    }
+    &-head {
+        font-family: "SFProVietsub";
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $title-color;
+        @include letterSpace(0.05rem);
+        th {
+            padding: 1rem 0 1.5rem;
+            &:first-child {
+                padding-left: 2rem;
+            }
+            &:last-child {
+                padding-right: 2rem;
+            }
+        }
+    }
+    &-row {
+        font-family: "SFProVietsub";
+        font-size: 1.3rem;
+        font-weight: 300;
+        text-transform: capitalize;
+        color: $title-color;
+        @include letterSpace(0.05rem);
+        &:hover {
+            background-color: rgba($primary-color, 0.1);
+            cursor: pointer;
+        }
+        td {
+            padding: 1rem 0;
+            &:first-child {
+                padding-left: 2rem;
+            }
+            &:last-child {
+                padding-right: 2rem;
+            }
+        }
+        &-status {
+            color: white;
+            width: 60px;
+            &.status-on-process {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #79bfff;
+                }
+            }
+            &.status-on-review {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #d486db;
+                }
+            }
+            &.status-on-cancel {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #ff4848;
+                }
+            }
+            &.status-on-completed {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: $secondary-light-color;
+                }
+            }
+            &.status-on-pending {
+                span {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    background-color: #ffc979;
+                }
+            }
+        }
+    }
+    @include maxWidth(499.8px) {
+        &-head {
+            font-size: 1.2rem;
+        }
+        &-row {
+            font-size: 1rem;
+        }
+    }
+    @include maxWidth(399px) {
+        &-head {
+            font-size: 1rem;
+        }
+        &-row {
+            font-size: 0.8rem;
+        }
+    }
+}

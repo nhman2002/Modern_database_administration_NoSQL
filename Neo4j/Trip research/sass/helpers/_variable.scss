@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "SFProText", sans-serif;
+    font-weight: 300;
+    src: url(./../fonts/FontsFree-Net-SFProText-Light-1.ttf);
+}
+
+@font-face {
+    font-family: "SFProText", sans-serif;
+    font-weight: 600;
+    src: url(./../fonts/FontsFree-Net-SFProText-Regular-1.ttf);
+}
+
+@font-face {
+    font-family: "SFProText", sans-serif;
+    font-weight: 900;
+    src: url(./../fonts/FontsFree-Net-SFProText-Semibold-1.ttf);
+}
+
+@font-face {
+    font-family: "SFProVietsub";
+    font-weight: 100;
+    src: url(./../fonts/SF-Pro-Display-Light.otf);
+}
+@font-face {
+    font-family: "SFProVietsub";
+    font-weight: 300;
+    src: url(./../fonts/SF-Pro-Display-Regular.otf);
+}
+@font-face {
+    font-family: "SFProVietsub";
+    font-weight: 500;
+    src: url(./../fonts/SF-Pro-Display-Medium.otf);
+}
+@font-face {
+    font-family: "SFProVietsub";
+    font-weight: 600;
+    src: url(./../fonts/SF-Pro-Display-Semibold.otf);
+}
+@font-face {
+    font-family: "SFProVietsub";
+    font-weight: 700;
+    src: url(./../fonts/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+    font-family: "SFProVietsub";
+    font-weight: 900;
+    src: url(./../fonts/SF-Pro-Display-Heavy.otf);
+}
+
+$primary-color: #ef5222;
+$primary-light-color: #f15a24;
+$primary-hover-color: #ff6855;
+
+$secondary-color: #00613d;
+$secondary-light-color: #009344;
+$secondary-normal-color: #00603d;
+
+$third-color: #95e1d3;
+
+$title-color: #333333;
+$tab-title-color: #b9b9b9;
+$icon-route-color: #a2abb3;
+$text-color: #637280;
+$text-content-color: #141414;
+$text-bold-color: #111111;
+$text-table-color: #333333;
+$text-schedule-color: #4a4a4a;
+
+$select-text-color: #495057;
+$dot-color: #a8a9aa;
+
+$border-color: #dce1e6;
+$border-field-color: #bdbdbd;
+$border-color-dark: #cccccccc;
+$border-color-floating: rgba(0, 97, 61, 0.2);
+$border-table-color: #d5d5d5;
+$border-route-color: #dde2e8;
+$border-dotted-color: #c0c6cc;
+$route-schedule-border: #ebedee;
+$border-bold-color: #979797;
+
+$border-seat-empty-color: #96c5e7;
+$bg-seat-empty-color: #def3ff;
+$border-seat-active-color: #f8beab;
+$bg-seat-active-color: #fdede8;
+$border-seat-disable-color: silver;
+$bg-seat-disable-color: #d5d9dd;
+$route-schedule-bg: #f8f9f9;
+$bg-drop-color: #f4f6f7;
+
+$opacity-bg-color: #666666;
+$component-bg-color: #f6f6f6;
+$wrapper-text-bg: rgba(99, 114, 128, 0.1);
+$floating-bg-color: #fafafa;
+$step-bg-color: #ededed;
+$select-bg-color: rgba(99, 114, 128, 0.1);
+
+$primary-font: "SFProText", sans-serif;
+$schedule-icon-color: rgb(99, 114, 128);
+
+$success-color: #00c851;
+$success-hover-color: #007e33;
+$danger-color: #ff4444;
+$danger-hover-color: #cc0000;
+$info-color: #33b5e5;
+$info-hover-color: #0099cc;
+$warning-color: #ffbb33;
+$warning-hover-color: #ff8800;
+
+$header-height: 102px;
+$header-top-height: 34px;
+$header-bottom-height: 68px;
+$header-tablet-mobile-height: 50px;
+$wrapper: 1920px;
+$container: 940px;
+$mini-container: 700px;
+$mobile-tablet-padding: 15px;

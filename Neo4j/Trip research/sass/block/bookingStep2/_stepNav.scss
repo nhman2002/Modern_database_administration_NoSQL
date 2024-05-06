@@ -1,0 +1,21 @@
+.step-nav {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    &-button {
+        cursor: pointer;
+        border-radius: 2.5rem;
+        border: 1px solid $border-dotted-color;
+        background-color: white;
+        color: $text-bold-color;
+        padding: 1.5rem 0;
+        font-size: 1.6rem;
+        @include letterSpace(0.05rem);
+    }
+    &-content {
+        @include flexBox(flex, center, center);
+        i {
+            margin-right: 3rem;
+            font-size: 1.8rem;
+        }
+    }
+}

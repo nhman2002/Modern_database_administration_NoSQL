@@ -1,0 +1,26 @@
+.error {
+    background-color: $primary-color;
+    color: white;
+    @include letterSpace(0.05rem);
+    font-size: 1.3rem;
+    padding: 2rem;
+    max-width: fit-content;
+    position: fixed;
+    top: 50%;
+    right: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(calc(100% + 1.6rem));
+    transition: all 0.2s ease-out;
+    &.error-validation-active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    &-list {
+        @include flexBox(flex, flex-start, flex-start, column);
+    }
+    &-item {
+        line-height: 1.5;
+    }
+}

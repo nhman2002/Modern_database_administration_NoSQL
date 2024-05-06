@@ -1,0 +1,156 @@
+.ticket {
+    padding: 2.5rem 0 3rem;
+    &-wrapper {
+        border-radius: 8px;
+        border: 1px solid $border-color;
+    }
+    &-title {
+        padding: 1.9rem 0;
+        font-family: "SFProVietsub";
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        @include letterSpace(0.1rem);
+        background-color: $primary-light-color;
+        border-radius: 8px 8px 0 0;
+    }
+    &-customer-sub,
+    &-route-sub {
+        padding: 1.2rem 2.4rem;
+        font-size: 1.5rem;
+        @include letterSpace(0.05rem);
+        color: $text-content-color;
+        background-color: $component-bg-color;
+        border-top: 1px solid rgba($border-bold-color, 0.5);
+        border-bottom: 1px solid rgba($border-bold-color, 0.5);
+    }
+    &-route-sub {
+        @include flexBox(flex, center);
+        column-gap: 0.5rem;
+        &-start,
+        &-end {
+            text-transform: capitalize;
+        }
+    }
+    &-block {
+        &-list {
+            @include flexBox(flex, stretch, space-between, row, wrap);
+        }
+        &-item {
+            @include flexBox(flex, baseline);
+            width: 50%;
+            padding: 1.3rem 3.2rem;
+        }
+        &-label {
+            width: calc(100% / 3);
+            font-size: 1.5rem;
+            @include letterSpace(0.05rem);
+        }
+        &-value {
+            width: calc(100% - 100% / 3);
+            @include letterSpace(0.05rem);
+            color: $text-content-color;
+            padding-left: 1rem;
+        }
+    }
+    &-route {
+        font-size: 1.5rem;
+        @include letterSpace(0.05rem);
+        &-routes {
+            &-value {
+                text-transform: capitalize;
+                @include flexBox(flex, center);
+                column-gap: 0.5rem;
+            }
+        }
+        &-time,
+        &-seats {
+            &-value {
+                font-family: "SFProVietsub";
+                font-weight: 700;
+                font-size: 1.6rem;
+                color: $secondary-color;
+            }
+        }
+        &-pickup {
+            &-value {
+                line-height: 1.5;
+            }
+        }
+    }
+    &-cost {
+        text-align: right;
+        padding: 2rem 2.5rem;
+        background-color: $component-bg-color;
+        border-top: 1px solid rgba($border-bold-color, 0.5);
+        border-radius: 0 0 8px 8px;
+        &-sub {
+            @include letterSpace(0.05rem);
+            font-family: "SFProVietsub";
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: $text-content-color;
+        }
+        &-value {
+            @include letterSpace(0.05rem);
+            font-family: "SFProVietsub";
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $primary-color;
+            span {
+                display: inline-block;
+                font-size: 1.8rem;
+                transform: translateY(-0.8rem);
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-title {
+            font-size: 1.5rem;
+        }
+        &-block {
+            display: block;
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+    @include maxWidth(599.8px) {
+        &-route-sub {
+            padding: 1rem 1.5rem;
+        }
+    }
+    @include maxWidth(479.8px) {
+        &-customer-sub,
+        &-route-sub {
+            font-size: 1.4rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        &-route-sub {
+            flex-wrap: wrap;
+        }
+        &-block {
+            display: block;
+            &-item {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                width: 100%;
+                font-size: 1.3rem;
+            }
+            &-label {
+                font-size: 1.3rem;
+            }
+            &-value {
+                flex-wrap: wrap;
+                word-wrap: break-word;
+            }
+        }
+    }
+}

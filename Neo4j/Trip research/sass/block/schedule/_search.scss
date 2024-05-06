@@ -1,0 +1,44 @@
+.search {
+    padding-bottom: 1rem;
+    &-list {
+        @include flexBox(flex, center, space-between, row, wrap);
+        padding: 0 1rem;
+    }
+    &-item {
+        width: calc(100% / 2 - 2rem / 2);
+        position: relative;
+    }
+    &-input {
+        display: block;
+        width: 100%;
+        border: none;
+        border: 1px solid $border-field-color;
+        font-size: 1.7rem;
+        border-radius: 1.6rem;
+        padding: 0.6rem 1.5rem;
+        &::placeholder {
+            color: $border-field-color;
+        }
+    }
+    &-icon {
+        font-size: 2rem;
+        color: $border-field-color;
+        @include positionElement("row-center");
+        right: 1rem;
+    }
+    @include maxWidth(767.8px) {
+        &-list {
+            row-gap: 0.5rem;
+        }
+        &-item {
+            width: 100%;
+        }
+        &-input {
+            padding: 0.5rem 1.2rem;
+            font-size: 1.4rem;
+        }
+        &-icon {
+            font-size: 1.6rem;
+        }
+    }
+}

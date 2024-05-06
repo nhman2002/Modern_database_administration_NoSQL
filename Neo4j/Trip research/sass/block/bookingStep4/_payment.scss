@@ -1,0 +1,158 @@
+.payment {
+    margin-bottom: 3rem;
+    &-title {
+        font-family: "SFProVietsub";
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        color: $secondary-color;
+        margin-bottom: 2.5rem;
+        @include letterSpace(0.05rem);
+    }
+    &-list {
+        padding: 0 2rem;
+        @include flexBox(flex, stretch, center, row, wrap);
+        gap: 2rem 3rem;
+    }
+    &-item {
+        position: relative;
+        width: calc(100% / 3 - (3rem * 2) / 2 - (2rem * 2) / 3);
+        padding: 1rem;
+        border: 1px dashed $border-color;
+        border-radius: 8px;
+        background-color: $component-bg-color;
+        cursor: pointer;
+        &.payment-method-active {
+            border: 1px dashed $primary-color;
+            background-color: rgba($primary-color, 0.15);
+        }
+    }
+    &-card {
+        @include flexBox(flex, center, center);
+        column-gap: 0.5rem;
+    }
+    &-image {
+        height: 4rem;
+        object-fit: contain;
+        margin-top: 0.8rem;
+    }
+    &-des {
+        color: $text-content-color;
+        font-size: 1.5rem;
+        @include letterSpace(0.05rem);
+        margin: 1.2rem 0;
+        text-align: center;
+    }
+    &-radio {
+        @include size(2.2rem);
+        appearance: none;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: white;
+        border: 2px solid $icon-route-color;
+        border-radius: 50%;
+        overflow: hidden;
+        &:checked {
+            border: none;
+            background-color: $primary-color;
+            & + label {
+                color: $primary-color;
+            }
+        }
+        &:checked::after {
+            display: inline-block;
+            content: "\2713";
+            border-radius: 50%;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: white;
+            @include positionElement("center", absolute);
+        }
+    }
+    // css active linking
+    &-linking {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        &.type-international-active {
+            .payment-linking-text {
+                display: block;
+            }
+            .payment-international {
+                display: flex;
+            }
+            .payment-inland {
+                display: none;
+            }
+        }
+        &.type-inland-active {
+            .payment-linking-text {
+                display: block;
+            }
+            .payment-international {
+                display: none;
+            }
+            .payment-inland {
+                display: flex;
+            }
+        }
+        &-text {
+            display: none;
+            font-family: "SFProVietsub";
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: $primary-color;
+            margin-bottom: 2.8rem;
+            @include letterSpace(0.05rem);
+        }
+    }
+    &-international,
+    &-inland {
+        @include flexBox(flex, stretch, flex-start, row, wrap);
+        gap: 1.5rem;
+        display: none;
+        &-item {
+            width: calc(100% / 6 - (1.5rem * 5) / 6);
+            padding: 0.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            display: grid;
+            place-content: center;
+            background-color: white;
+            border: 1px solid $border-route-color;
+            img {
+                height: 4.9rem;
+                object-fit: contain;
+            }
+        }
+    }
+    @include maxWidth(767.8px) {
+        &-item {
+            width: calc(100% / 2 - 3rem / 2 - 2rem / 3);
+        }
+    }
+    @include maxWidth(509.8px) {
+        &-list {
+            padding: 0 2rem;
+            display: block;
+        }
+        &-item {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+        &-international,
+        &-inland {
+            flex-wrap: wrap;
+            &-item {
+                width: calc(100% / 3 - (1.5rem * 2) / 3);
+                img {
+                    height: 3.5rem;
+                }
+            }
+        }
+    }
+}

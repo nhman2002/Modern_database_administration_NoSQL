@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé xe Phương Trang</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./../styles/reset.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="./../vendors/boxicons-2.1.1/css/boxicons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./../styles/admin_Customer.css">
+</head>
+
+<body class="wrapper">
+    <section class="sidebar">
+        <a href="#" class="sidebar-logo">
+            <img src="./../images/home-img-logo.png" alt="" class="sidebar-logo-img">
+            <img src="./../images/sidebar-mini-logo.png" alt="" class="sidebar-logo-mini">
+        </a>
+        <ul class="sidebar-list">
+            <li class="sidebar-item sidebar-active">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-dashboard sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-user-account sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">customer</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-credit-card-front sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">ticket</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-business sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">route</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='fa-solid fa-calendar-days sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">schedule</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='fa-solid fa-bus sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">futa bus</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-bar-chart-alt-2 sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">analytics</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-user-pin sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">staff</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class='bx bxs-cog sidebar-link-icon'></i>
+                    <span class="sidebar-link-text">settings</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <div class="main">
+        <header class="header">
+            <div class="header-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="header-search">
+                <input type="text" class="header-search-input" placeholder="Tìm kiếm ở đây ...">
+                <i class='bx bx-search header-search-icon'></i>
+            </div>
+            <div class="header-user">
+                <img src="https://media.istockphoto.com/photos/steamed-octopus-for-sashimi-picture-id1165598498?b=1&k=20&m=1165598498&s=170667a&w=0&h=8-oKrycjOj5wqzNyTuKrP3aJ6faLbFq2y80QvCJ37Z0="
+                    alt="" class="header-user-avatar">
+                <div class="header-user-info">
+                    <h3 class="header-user-name">Sin Takodachi</h3>
+                    <p class="header-user-position">Member Tentacles</p>
+                </div>
+                <div class="header-user-notify">
+                    <div class="header-user-notify-number">5</div>
+                    <i class='bx bxs-bell'></i>
+                </div>
+                <div class="header-profile">
+                    <div class="header-profile-top">
+                        <div class="header-profile-wel">
+                            <p class="header-profile-hi">Hi Takodachi</p>
+                            <p class="header-profile-subhi">Good Morning!</p>
+                        </div>
+                        <div class="header-profile-cog"><i class='bx bx-cog'></i></div>
+                    </div>
+                    <div class="header-profile-avatar">
+                        <img src="https://media.istockphoto.com/photos/steamed-octopus-for-sashimi-picture-id1165598498?b=1&k=20&m=1165598498&s=170667a&w=0&h=8-oKrycjOj5wqzNyTuKrP3aJ6faLbFq2y80QvCJ37Z0="
+                            alt="">
+                        <p class="header-profile-name">Sin Takodachi</p>
+                        <p class="header-profile-position">UX/UI Design - Front Dev</p>
+                    </div>
+                    <ul class="header-profile-notify">
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                        <li class="header-profile-item">
+                            <h5 class="header-profile-n-title">Lorem, ipsum dolor.</h5>
+                            <p class="header-profile-n-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nostrum, vel!</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="data ">
+            <div class="data-overlay"></div>
+            <div class="data-confirm">
+                <div class="data-popup-title">Xác nhận</div>
+                <div class="data-confirm-icon"><i class='bx bxs-message-rounded-x'></i></div>
+                <p class="data-confirm-txt">
+                    Bạn có chắc chắn muốn xóa dữ liệu này không?
+                </p>
+                <p class="data-confirm-txt">Hành động này sẽ xóa dữ liệu và có thể gây ra lỗi trong
+                    hệ thống!</p>
+                <div class="data-confirm-button">
+                    <div class="data-confirm-cancel">Cancel</div>
+                    <div class="data-confirm-remove">Accept</div>
+                </div>
+            </div>
+            <div class="data-popup">
+                <div class="data-popup-title">Thêm dữ liệu</div>
+                <div class="data-popup-close"><i class='bx bx-x'></i></div>
+                <form action="" class="data-form admin-form form-validation">
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-id">ID:</label>
+                        <input class="data-form-input" type="text" name="customer-id" id="customer-id">
+                    </div>
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-name">họ tên:</label>
+                        <input class="data-form-input" type="text" name="customer-name" id="customer-name">
+                    </div>
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-dob">ngày sinh:</label>
+                        <input class="data-form-input" type="date" name="customer-dob" id="customer-dob">
+                    </div>
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-phone">số điện thoại:</label>
+                        <input class="data-form-input" type="text" name="customer-phone" id="customer-phone">
+                    </div>
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-cmnd">CMND:</label>
+                        <input class="data-form-input" type="text" name="customer-cmnd" id="customer-cmnd">
+                    </div>
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-mail">mail:</label>
+                        <input class="data-form-input" type="text" name="customer-mail" id="customer-mail">
+                    </div>
+                    <div class="form-group data-form-group">
+                        <label class="data-form-label" for="customer-address">Dịa chỉ:</label>
+                        <input class="data-form-input" type="text" name="customer-address" id="customer-address">
+                    </div>
+                    <div class="form-submit data-form-submit">
+                        <div class="data-form-btn data-form-clear">clear all</div>
+                        <div class="data-form-btn data-form-accept form-submit-validation">accept</div>
+                    </div>
+                </form>
+            </div>
+            <div class="data-wrapper">
+                <div class="data-control">
+                    <div class="data-control-all">
+                        <div class="data-control-input">
+                            <input type="checkbox" name="" id="check-all">
+                        </div>
+                        <label for="check-all">select all</label>
+                        <div class="data-control-count">(0 selected)</div>
+                    </div>
+                    <div class="data-control-add">
+                        <div class="data-control-add-btn">
+                            <i class='bx bx-book-add'></i>
+                            <span>Thêm mới</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-table">
+                    <ul class="data-box data-title">
+                        <li class="data-title-item data-title-check">chọn</li>
+                        <li class="data-title-item data-title-id">ID</li>
+                        <li class="data-title-item data-title-name">họ tên</li>
+                        <li class="data-title-item data-title-dob">ngày sinh</li>
+                        <li class="data-title-item data-title-phone">SĐT</li>
+                        <li class="data-title-item data-title-cmnd">CMND</li>
+                        <li class="data-title-item data-title-mail">mail</li>
+                        <li class="data-title-item data-title-address">địa chỉ</li>
+                        <li class="data-title-item data-title-action">hành động</li>
+                    </ul>
+                    <div class="data-box data-value">
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Hoàng Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="data-value-row">
+                            <li class="data-value-item data-value-check"><input type="checkbox" name="" id=""></li>
+                            <li class="data-value-item data-value-id">CTM001</li>
+                            <li class="data-value-item data-value-name">Nguyễn Ngọc Huy</li>
+                            <li class="data-value-item data-value-dob">06/10/1999</li>
+                            <li class="data-value-item data-value-phone">0968963859</li>
+                            <li class="data-value-item data-value-cmnd">221480071</li>
+                            <li class="data-value-item data-value-mail">huynguyenffn@gmail.com</li>
+                            <li class="data-value-item data-value-address">88 Làng Tăng Phú, Tăng Nhơn Phú A, Quận 9,
+                                Thành
+                                phố Hồ Chí Minh, Việt Nam</li>
+                            <li class="data-value-item data-value-action">
+                                <div class="data-value-action-button">
+                                    <div class="data-value-action-edit">
+                                        <span>sửa</span>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                    <div class="data-value-action-remove">
+                                        <span>xóa</span>
+                                        <i class='bx bxs-trash'></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="data-navigation"></div>
+            </div>
+        </section>
+        <!-- error -->
+        <section class="error">
+            <ul class="error-list">
+                <li class="error-item">fs</li>
+            </ul>
+        </section>
+    </div>
+    <script src="./../scripts/dashboardMenu.js"></script>
+    <script src="./../scripts/adminAction.js"></script>
+    <script src="./../scripts/validation_mold.js"></script>
+</body>
+
+</html>

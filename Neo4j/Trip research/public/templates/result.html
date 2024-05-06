@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    {% if result %}
+        {% if result.trips %}
+            <h1>Chuyến gần nhất:</h1>   
+            {% for index in range(result.locations|length - 1) %}
+            <ul>
+                <div><b>Chuyến {{ result.locations[index].name }} - {{ result.locations[index + 1].name }}:</b></div>
+                
+                {% if result.trips is defined and index < result.trips|length %}
+                    <li>Loại xe: {{ result.trips[index]["type"] }}</li>
+                    <li>Khoảng cách: {{ result.trips[index]["distance"] }}</li>
+                    <li>Thời gian: {{ result.trips[index]["duration"] }}</li>
+                {% endif %}
+            </ul>
+            {% endfor %}
+            
+        {% else %}
+            <p>Không tìm thấy chuyến xe gần nhất.</p>
+        {% endif %}
+    {% else %}
+        <p>Không tìm thấy chuyến xe gần nhất.</p>
+    {% endif %}
+    <a href="/">Trở lại</a>
+</body>
+</html>
